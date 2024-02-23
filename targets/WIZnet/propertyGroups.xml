@@ -3,7 +3,7 @@
   <group short="Target Processor" group="Build Options" long="Select a set of target options" name="Target" default="W7500">
     <groupEntry name="W7500" family="iMCU Series">
       <property name="linker_memory_map_file" value="$(TargetsDir)/WIZnet/W7500_MemoryMap.xml" />
-      <property name="debug_register_definition_file" value="$(TargetsDir)/STM32_Custom/W7500_Peripherals.xml" />
+      <property name="debug_register_definition_file" value="$(TargetsDir)/WIZnet/W7500_Peripherals.xml" />
       <property name="macros" value="DeviceVectorsFile=W7500.vec" />
       <cdefine name="W7500" />
       <cdefine name="__VECTORS" value="&quot;W7500.vec&quot;" />
