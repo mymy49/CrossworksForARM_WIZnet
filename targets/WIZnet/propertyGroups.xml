@@ -1,0 +1,57 @@
+<!DOCTYPE CrossStudio_Group_Values>
+<propertyGroups>
+  <group short="Target Processor" group="Build Options" long="Select a set of target options" name="Target" default="W7500">
+    <groupEntry name="W7500" family="iMCU Series">
+      <property name="linker_memory_map_file" value="$(TargetsDir)/WIZnet/W7500_MemoryMap.xml" />
+      <property name="debug_register_definition_file" value="$(TargetsDir)/STM32_Custom/W7500_Peripherals.xml" />
+      <property name="macros" value="DeviceVectorsFile=W7500.vec" />
+      <cdefine name="W7500" />
+      <cdefine name="__VECTORS" value="&quot;W7500.vec&quot;" />
+      <cdefine name="__TARGET_PROCESSOR_W7500" />
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="target_script_file" value="$(TargetsDir)/WIZnet/W7500_Target.js" />
+    </groupEntry>
+  </group>
+  <group short="Section Placement" group="Build Options" long="Select a set of options based on section placement." name="Placement" default="Flash">
+    <groupEntry name="None">
+      <property name="linker_section_placement_file" value="" />
+      <property name="arm_target_loader_applicable_loaders" value="" />
+      <property name="arm_target_loader_default_loader" value="" />
+    </groupEntry>
+    <groupEntry name="Flash">
+      <property value="$(StudioDir)/targets/Cortex_M/flash_placement.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+    </groupEntry>
+    <groupEntry name="Flash Vectors In RAM">
+      <property value="$(StudioDir)/targets/Cortex_M/flash_placement.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+      <cdefine value="1" name="VECTORS_IN_RAM" />
+    </groupEntry>
+    <groupEntry name="Flash Copy To RAM">
+      <property value="$(StudioDir)/targets/Cortex_M/flash_to_ram_placement.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+      <cdefine value="1" name="VECTORS_IN_RAM" />
+    </groupEntry>
+    <groupEntry name="Flash TCM">
+      <property value="$(StudioDir)/targets/Cortex_M/flash_placement_tcm.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+      <cdefine value="1" name="INITIALIZE_TCM_SECTIONS" />
+    </groupEntry>
+    <groupEntry name="(QUADSPI) Flash">
+      <property value="$(StudioDir)/targets/Cortex_M/flash_placement.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash;QUADSPI Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash;QUADSPI Flash" />
+    </groupEntry>
+    <groupEntry name="RAM">
+      <property value="$(StudioDir)/targets/Cortex_M/ram_placement.xml" name="linker_section_placement_file" />
+      <property name="arm_target_loader_applicable_loaders" value="" />
+      <property name="arm_target_loader_default_loader" value="RAM" />
+    </groupEntry>
+  </group>
+</propertyGroups>
