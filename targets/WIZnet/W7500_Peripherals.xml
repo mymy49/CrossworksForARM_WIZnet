@@ -172,4 +172,78 @@
 		</Register>
 
 	</RegisterGroup>
+
+	<RegisterGroup name="SCB" start="0xE000ED00" description="System control block">
+		<Register start="+0x0" size="0" name="CPUID" access="ReadOnly" description="CPUID base register" reset_value="0x410FC241" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="4" name="Revision" description="Revision number" />
+			<BitField start="4" size="12" name="PartNo" description="Part number of the processor" />
+			<BitField start="16" size="4" name="Constant" description="Reads as 0xF" />
+			<BitField start="20" size="4" name="Variant" description="Variant number" />
+			<BitField start="24" size="8" name="Implementer" description="Implementer code" />
+		</Register>
+
+		<Register start="+0x4" size="0" name="ICSR" access="Read/Write" description="Interrupt control and state register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="VECTACTIVE" description="Active vector" />
+			<BitField start="12" size="6" name="VECTPENDING" description="Pending vector" />
+			<BitField start="22" size="1" name="ISRPENDING" description="Interrupt pending flag" />
+			<BitField start="25" size="1" name="PENDSTCLR" description="SysTick exception clear-pending bit" />
+			<BitField start="26" size="1" name="PENDSTSET" description="SysTick exception set-pending bit" />
+			<BitField start="27" size="1" name="PENDSVCLR" description="PendSV clear-pending bit" />
+			<BitField start="28" size="1" name="PENDSVSET" description="PendSV set-pending bit" />
+			<BitField start="31" size="1" name="NMIPENDSET" description="NMI set-pending bit." />
+		</Register>
+
+		<Register start="+0xC" size="0" name="AIRCR" access="Read/Write" description="Application interrupt and reset control register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="1" size="1" name="VECTCLRACTIVE" description="VECTCLRACTIVE" />
+			<BitField start="2" size="1" name="SYSRESETREQ" description="SYSRESETREQ" />
+			<BitField start="15" size="1" name="ENDIANESS" description="ENDIANESS" />
+			<BitField start="16" size="16" name="VECTKEYSTAT" description="Register key" />
+		</Register>
+
+		<Register start="+0x10" size="0" name="SCR" access="Read/Write" description="System control register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="1" size="1" name="SLEEPONEXIT" description="SLEEPONEXIT" />
+			<BitField start="2" size="1" name="SLEEPDEEP" description="SLEEPDEEP" />
+			<BitField start="4" size="1" name="SEVEONPEND" description="Send Event on Pending bit" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="CCR" access="Read/Write" description="Configuration and control register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="3" size="1" name="UNALIGN__TRP" description="UNALIGN_ TRP" />
+			<BitField start="9" size="1" name="STKALIGN" description="STKALIGN" />
+		</Register>
+
+		<Register start="+0x1C" size="0" name="SHPR2" access="Read/Write" description="System handler priority registers" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="24" size="8" name="PRI_11" description="Priority of system handler 11" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="SHPR3" access="Read/Write" description="System handler priority registers" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="16" size="8" name="PRI_14" description="Priority of system handler 14" />
+			<BitField start="24" size="8" name="PRI_15" description="Priority of system handler 15" />
+		</Register>
+
+	</RegisterGroup>
+
+	<RegisterGroup name="SysTick" start="0xe000e010" description="24-bit System Timer">
+		<Register name="SYST_CSR" start="0xe000e010" description="SysTick Control and Status Register">
+			<BitField name="COUNTFLAG" start="16" size="1" description="Counter Flag" />
+			<BitField name="CLKSOURCE" start="2" size="1" description="Timer Clock Source" />
+			<BitField name="TICKINT" start="1" size="1" description="Tick Interrupt Enable" />
+			<BitField name="ENABLE" start="0" size="1" description="Enable SysTick Timer" />
+		</Register>
+
+		<Register name="SYST_RVR" start="0xe000e014" description="SysTick Reload Value Register">
+			<BitField name="RELOAD" start="0" size="24" description="Value to load into the SYST_CVR when the counter is enabled and when it reaches 0" />
+		</Register>
+
+		<Register name="SYST_CVR" start="0xe000e018" description="SysTick Current Value Register Register">
+			<BitField name="CURRENT" start="0" size="24" description="The current value of the SysTick counter" />
+		</Register>
+
+		<Register name="SYST_CALIB" start="0xe000e01c" access="ReadOnly" description="SysTick Calibration Value Register">
+			<BitField name="NOREF" start="31" size="1" description="Indicates whether the device provides a reference clock to the processor" />
+			<BitField name="SKEW" start="30" size="1" description="Indicates whether the TENMS value is exact" />
+			<BitField name="TENMS" start="0" size="24" description="Reload value for 10ms (100Hz) timing, subject to system clock skew errors" />
+		</Register>
+
+	</RegisterGroup>
+
 </Processor>
