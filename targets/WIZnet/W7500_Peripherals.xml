@@ -1,7 +1,175 @@
 <Processor name="W7500" description="W7500">
 	<RegisterGroup name="CRG" start="0x41001000" description="Clock Reset Generator">
-		<Register start="+0x0" size="0" name="OSC_PDR" access="Read/Write" description="power down register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="OSC_PDR" access="Read/Write" description="OSC power down register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="OSCPD" description="Internal 8MHz RC oscillator power down register" />
 		</Register>
+
+		<Register start="+0x4" size="0" name="PLL_PDR" access="Read/Write" description="PLL power down register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="PLLPD" description="PLL power down register" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="PLL_FCR" access="Read/Write" description="PLL frequency calculating register" reset_value="0x00050200" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="OD" description="OD" />
+			<BitField start="8" size="6" name="N" description="OD" />
+			<BitField start="16" size="6" name="M" description="M" />
+		</Register>
+
+		<Register start="+0x18" size="0" name="PLL_OER" access="Read/Write" description="PLL output enable register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="PLLOEN" description="output enable register of PLL" />
+		</Register>
+
+		<Register start="+0x1C" size="0" name="PLL_BPR" access="Read/Write" description="PLL bypass register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="PLLBP" description="bypass register of PLL" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="PLL_IFSR" access="Read/Write" description="PLL input clock source select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="PLLIS" description="select register of PLL input clock source" />
+		</Register>
+
+		<Register start="+0x30" size="0" name="FCLK_SSR" access="Read/Write" description="FCLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FCKSRC" description="select register of FCLK clock source" />
+		</Register>
+
+		<Register start="+0x34" size="0" name="FCLK_PVSR" access="Read/Write" description="FCLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FCKPRE" description="select prescale value of FCLK clock" />
+		</Register>
+
+		<Register start="+0x40" size="0" name="SSPCLK_SSR" access="Read/Write" description="SSPCLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="SSPCSS" description="SSPCLK clock source select register" />
+		</Register>
+
+		<Register start="+0x44" size="0" name="SSPCLK_PVSR" access="Read/Write" description="SSPCLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="SSPCP" description="select prescale value of SSPCLK clock" />
+		</Register>
+
+		<Register start="+0x60" size="0" name="ADCCLK_SSR" access="Read/Write" description="ADCCLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ADCSS" description="ADCCLK clock source select register" />
+		</Register>
+
+		<Register start="+0x64" size="0" name="ADCCLK_PVSR" access="Read/Write" description="ADCCLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ADCCP" description="select prescale value of ADCCLK clock" />
+		</Register>
+
+		<Register start="+0x70" size="0" name="TIMER0CLK_SSR" access="Read/Write" description="TIMER0CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="T0CSS" description="TIMCLK0 clock source select register" />
+		</Register>
+
+		<Register start="+0x74" size="0" name="TIMER0CLK_PVSR" access="Read/Write" description="TIMER0CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="T0CPS" description="select prescale value of TIM0CLK clock" />
+		</Register>
+
+		<Register start="+0x80" size="0" name="TIMER1CLK_SSR" access="Read/Write" description="TIMER1CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="T1CSS" description="TIMCLK1 clock source select register" />
+		</Register>
+
+		<Register start="+0x74" size="0" name="TIMER1CLK_PVSR" access="Read/Write" description="TIMER1CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="T1CPS" description="select prescale value of TIM1CLK clock" />
+		</Register>
+
+		<Register start="+0xB0" size="0" name="PWM0CLK_SSR" access="Read/Write" description="PWM0CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P0CSS" description="PWMCLK0 clock source select register" />
+		</Register>
+
+		<Register start="+0xB4" size="0" name="PWM0CLK_PVSR" access="Read/Write" description="PWM0CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P0CPS" description="select prescale value of PWM0CLK clock" />
+		</Register>
+
+		<Register start="+0xC0" size="0" name="PWM1CLK_SSR" access="Read/Write" description="PWM1CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P1CSS" description="PWMCLK1 clock source select register" />
+		</Register>
+
+		<Register start="+0xC4" size="0" name="PWM1CLK_PVSR" access="Read/Write" description="PWM1CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P1CPS" description="select prescale value of PWM1CLK clock" />
+		</Register>
+
+		<Register start="+0xD0" size="0" name="PWM2CLK_SSR" access="Read/Write" description="PWM2CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P2CSS" description="PWMCLK2 clock source select register" />
+		</Register>
+
+		<Register start="+0xD4" size="0" name="PWM2CLK_PVSR" access="Read/Write" description="PWM2CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P2CPS" description="select prescale value of PWM2CLK clock" />
+		</Register>
+
+		<Register start="+0xE0" size="0" name="PWM3CLK_SSR" access="Read/Write" description="PWM3CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P3CSS" description="PWMCLK3 clock source select register" />
+		</Register>
+
+		<Register start="+0xE4" size="0" name="PWM3CLK_PVSR" access="Read/Write" description="PWM3CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P3CPS" description="select prescale value of PWM3CLK clock" />
+		</Register>
+
+		<Register start="+0xF0" size="0" name="PWM4CLK_SSR" access="Read/Write" description="PWM4CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P4CSS" description="PWMCLK4 clock source select register" />
+		</Register>
+
+		<Register start="+0xF4" size="0" name="PWM4CLK_PVSR" access="Read/Write" description="PWM4CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P4CPS" description="select prescale value of PWM4CLK clock" />
+		</Register>
+
+		<Register start="+0x100" size="0" name="PWM5CLK_SSR" access="Read/Write" description="PWM5CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P5CSS" description="PWMCLK5 clock source select register" />
+		</Register>
+
+		<Register start="+0x104" size="0" name="PWM5CLK_PVSR" access="Read/Write" description="PWM5CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P5CPS" description="select prescale value of PWM5CLK clock" />
+		</Register>
+
+		<Register start="+0x110" size="0" name="PWM6CLK_SSR" access="Read/Write" description="PWM6CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P6CSS" description="PWMCLK6 clock source select register" />
+		</Register>
+
+		<Register start="+0x114" size="0" name="PWM6CLK_PVSR" access="Read/Write" description="PWM6CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P6CPS" description="select prescale value of PWM6CLK clock" />
+		</Register>
+
+		<Register start="+0x120" size="0" name="PWM7CLK_SSR" access="Read/Write" description="PWM7CLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P6CSS" description="PWMCLK6 clock source select register" />
+		</Register>
+
+		<Register start="+0x124" size="0" name="PWM7CLK_PVSR" access="Read/Write" description="PWM7CLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="P7CPS" description="select prescale value of PWM7CLK clock" />
+		</Register>
+
+		<Register start="+0x130" size="0" name="RTC_HS_SSR" access="Read/Write" description="RTC High Speed source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RTCHS" description="RTCCLK_hs clock source select register" />
+		</Register>
+
+		<Register start="+0x134" size="0" name="RTC_HS_PVSR" access="Read/Write" description="RTC High Speed prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RTCPRE" description="select prescale value of RTCCLK_hs clock" />
+		</Register>
+
+		<Register start="+0x13C" size="0" name="RTC_SSR" access="Read/Write" description="RTC source select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RTCSEL" description="RTCCLK clock source select register" />
+		</Register>
+
+		<Register start="+0x140" size="0" name="WDOGCLK_HS_SSR" access="Read/Write" description="WDOGCLK High Speed source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="WDHS" description="WDOGCLK_hs clock source select register" />
+		</Register>
+
+		<Register start="+0x144" size="0" name="WDOGCLK_HS_PVSR" access="Read/Write" description="WDOGCLK High Speed prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="WDPRE" description="select prescale value of WDOGCLK_hs clock" />
+		</Register>
+
+		<Register start="+0x14C" size="0" name="WDOGCLK_SSR" access="Read/Write" description="WDOGCLK clock source select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="WDSEL" description="WDOGCLK clock source select register" />
+		</Register>
+
+		<Register start="+0x150" size="0" name="UARTCLK_SSR" access="Read/Write" description="UARTCLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="UCSS" description="UARTCLK clock source select register" />
+		</Register>
+
+		<Register start="+0x154" size="0" name="UARTCLK_PVSR" access="Read/Write" description="UARTCLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="UCP" description="select prescale value of UARTCLK clock" />
+		</Register>
+
+		<Register start="+0x160" size="0" name="MIICLK_ECR" access="Read/Write" description="MIICLK enable control register" reset_value="0x00000003" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="MIIREN" description="MII RX Clock source enable register" />
+			<BitField start="1" size="1" name="MIITEN" description="MII TX Clock source enable register" />
+		</Register>
+
+		<Register start="+0x170" size="0" name="MONCLK_SSR" access="Read/Write" description="Monitoring Clock source select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="CLKMON_SEL" description="Select clock source for monitoring (monitoring pin : PA_02) This bit is written by S/W to set enable or disable" />
+		</Register>
+
 	</RegisterGroup>
 </Processor>
