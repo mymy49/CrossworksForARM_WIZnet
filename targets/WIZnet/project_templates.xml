@@ -1,5 +1,5 @@
 <projects>
-  <project cpu_manufacturer="WIZnet" cpu_name="iMCU" cpu_generic_name="iMCU" board_manufacturer="" board_name="" name="iMCU Executable" description="An executable for WIZnet iMCU." type="Executable" template_name="iMCU_EXE">
+  <project cpu_manufacturer="WIZnet" cpu_name="iMCU" cpu_generic_name="iMCU" board_manufacturer="" board_name="" name="iMCU Executable(bare-metal)" description="An executable for WIZnet iMCU(bare-metal)." type="Executable" template_name="iMCU_EXE_B">
     <configuration name="THUMB Debug" />
     <configuration name="THUMB Release" />
     <configuration name="$(Configuration)" />
@@ -27,13 +27,13 @@
     <property name="linker_scanf_fmt_level" />
     <property name="linker_scanf_fp_enabled" />
     <property name="linker_scanf_character_group_matching_enabled" />
-    <property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/include" />
+    <property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/include_bare" />
     <property name="property_groups_file_path" value="$(TargetsDir)/WIZnet/propertyGroups.xml" />
     <propertygroup name="Target" value="W7500" choose="Yes" />
     <propertygroup name="Placement" value="Flash" choose="Yes" />
     <propertygroup name="CMSIS_CORE" value="Yes" />
     <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
-      <file name="main.c" source="$(StudioDir)/samples/Shared/main.c" />
+      <file name="main.cpp" source="$(TargetsDir)/WIZnet/W7500/main.cpp" />
     </folder>
     <folder name="System Files">
       <file name="$(StudioDir)/source/thumb_crt0.s" expand="no" />

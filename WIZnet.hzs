@@ -14,6 +14,8 @@
   <ProjectSessionItem path="WIZnet;WIZnet CPU Support;packages"/>
   <ProjectSessionItem path="WIZnet;WIZnet CPU Support;targets"/>
   <ProjectSessionItem path="WIZnet;WIZnet CPU Support;targets;WIZnet"/>
+  <ProjectSessionItem path="WIZnet;WIZnet CPU Support;targets;WIZnet;W7500"/>
+  <ProjectSessionItem path="WIZnet;WIZnet CPU Support;targets;WIZnet;include_bare"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -39,14 +41,16 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="7" useTextEdit="1" path="packages/WIZnet_package.xml" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="89" y="13" useTextEdit="1" path="targets/WIZnet/propertyGroups.xml" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="63" y="20" useTextEdit="1" path="targets/WIZnet/project_templates.xml" left="0" top="4" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="9" useTextEdit="1" path="packages/WIZnet_package.xml" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="22" useTextEdit="1" path="targets/WIZnet/propertyGroups.xml" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="37" useTextEdit="1" path="targets/WIZnet/project_templates.xml" left="0" top="15" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="28" y="24" useTextEdit="1" path="targets/WIZnet/W7500.vec" left="0" top="8" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="150" useTextEdit="1" path="targets/WIZnet/W7500_Peripherals.xml" left="0" top="128" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="223" useTextEdit="1" path="targets/WIZnet/W7500_Peripherals.xml" left="0" top="184" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="targets/WIZnet/W7500_Target.js" left="0" top="63" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="targets/WIZnet/WIZnet_Startup.s" left="0" top="117" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" path="targets/WIZnet/W7500_MemoryMap.xml" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="53" y="20" useTextEdit="1" path="targets/WIZnet/WIZnet_Startup.s" left="0" top="2" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" path="targets/WIZnet/W7500_MemoryMap.xml" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="targets/WIZnet/include_bare/system_w7500x.h" left="0" top="15" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="171" useTextEdit="1" path="targets/WIZnet/include_bare/w7500x.h" left="0" top="151" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="WIZnet CPU Support" fileDialogDefaultFilter="*" autoConnectTarget="" buildConfiguration="Common" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/alexander/private/CrossworksForARM_WIZnet/packages" debugSearchPath="" autoConnectCapabilities="0"/>
 </session>
