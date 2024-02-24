@@ -22,4 +22,4 @@ To install the new created package, go to Tools -> Packages -> Manually Install 
 ![Package Manager](./doc/Menu_PackageManagerManual.png)
 
 
-#This document was copied and modified from Markus Klein's article.
+# This document was copied and modified from Markus Klein's article.
