@@ -6,7 +6,7 @@
     <property name="target_get_partname_script" value="GetPartName()" />
     <property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
     <property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
-    <property name="target_script_file" value="$(TargetsDir)/WIZnet/W7500_Target.js" />
+    <property name="target_script_file" value="$(TargetsDir)/WIZnet/W7500x/W7500_Target.js" />
     <property name="target_reset_script" configuration="RAM" value="Reset()" />
     <property name="target_reset_script" configuration="Flash" value="FLASHReset()" />
     <property name="arm_target_loader_can_lock_all" configuration="Flash" value="No" />
@@ -27,13 +27,13 @@
     <property name="linker_scanf_fmt_level" />
     <property name="linker_scanf_fp_enabled" />
     <property name="linker_scanf_character_group_matching_enabled" />
-    <property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/include_bare" />
+    <property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/W7500x" />
     <property name="property_groups_file_path" value="$(TargetsDir)/WIZnet/propertyGroups.xml" />
     <propertygroup name="Target" value="W7500" choose="Yes" />
     <propertygroup name="Placement" value="Flash" choose="Yes" />
     <propertygroup name="CMSIS_CORE" value="Yes" />
     <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
-      <file name="main.cpp" source="$(TargetsDir)/WIZnet/W7500/main.cpp" />
+      <file name="main.cpp" source="$(TargetsDir)/WIZnet/W7500x/main.cpp" />
     </folder>
     <folder name="System Files">
       <file name="$(StudioDir)/source/thumb_crt0.s" expand="no" />
@@ -41,4 +41,70 @@
       <file name="$(TargetsDir)/WIZnet/$(DeviceVectorsFile)" expand="no" />
     </folder>
   </project>
+
+  <project cpu_manufacturer="WIZnet" cpu_name="iMCU" cpu_generic_name="iMCU" board_manufacturer="" board_name="" name="iMCU Executable(standard library)" description="An executable for WIZnet iMCU(standard library)." type="Executable" template_name="iMCU_EXE">
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <configuration name="$(Configuration)" />
+    <property name="gcc_enable_all_warnings" value="Yes" />
+    <property name="c_preprocessor_definitions" value="USE_STDPERIPH_DRIVER" />
+    <property name="target_get_partname_script" value="GetPartName()" />
+    <property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+    <property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <property name="target_script_file" value="$(TargetsDir)/WIZnet/W7500x/W7500_Target.js" />
+    <property name="target_reset_script" configuration="RAM" value="Reset()" />
+    <property name="target_reset_script" configuration="Flash" value="FLASHReset()" />
+    <property name="arm_target_loader_can_lock_all" configuration="Flash" value="No" />
+    <property name="arm_target_loader_can_unlock_all" configuration="Flash" value="No" />
+    <property name="arm_target_loader_can_lock_range" configuration="Flash" value="No" />
+    <property name="arm_target_loader_can_unlock_range" configuration="Flash" value="No" />
+    <property name="arm_target_trace_interface_type" value="None" />
+    <property name="arm_linker_jtag_pad_pre_dr" value="1" />
+    <property name="arm_linker_jtag_pad_pre_ir" value="5" />
+    <property name="arm_fp_abi" value="Soft" />
+    <property name="arm_linker_stack_size" value="256" choose="yes" />
+    <property name="arm_linker_process_stack_size" value="0" />
+    <property name="arm_linker_heap_size" value="128" choose="yes" />
+    <property name="linker_output_format" />
+    <property name="linker_printf_fmt_level" />
+    <property name="linker_printf_width_precision_supported" />
+    <property name="linker_printf_fp_enabled" />
+    <property name="linker_scanf_fmt_level" />
+    <property name="linker_scanf_fp_enabled" />
+    <property name="linker_scanf_character_group_matching_enabled" />
+    <property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/W7500x" />
+    <property name="property_groups_file_path" value="$(TargetsDir)/WIZnet/propertyGroups.xml" />
+    <propertygroup name="Target" value="W7500" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <propertygroup name="CMSIS_CORE" value="Yes" />
+    <folder name="Driver Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="w7500x_adc.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_adc.c" />
+      <file name="w7500x_crg.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_crg.c" />
+      <file name="w7500x_dualtimer.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_dualtimer.c" />
+      <file name="w7500x_flash.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_flash.c" />
+      <file name="w7500x_gpio.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_gpio.c" />
+      <file name="w7500x_miim.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_miim.c" />
+      <file name="w7500x_misc.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_misc.c" />
+      <file name="w7500x_pwm.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_pwm.c" />
+      <file name="w7500x_rng.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_rng.c" />
+      <file name="w7500x_rtc.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_rtc.c" />
+      <file name="w7500x_ssp.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_ssp.c" />
+      <file name="w7500x_uart.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_uart.c" />
+      <file name="w7500x_wdt.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_wdt.c" />
+      <file name="w7500x_wztoe.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_wztoe.c" />
+    </folder>
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="main.c" source="$(TargetsDir)/WIZnet/W7500x/main.c" />
+      <file name="retarget.c" source="$(TargetsDir)/WIZnet/W7500x/retarget.c" />
+      <file name="w7500x_conf.h" source="$(TargetsDir)/WIZnet/W7500x/w7500x_conf.h" />
+      <file name="w7500x_it.c" source="$(TargetsDir)/WIZnet/W7500x/w7500x_it.c" />
+      <file name="w7500x_it.h" source="$(TargetsDir)/WIZnet/W7500x/w7500x_it.h" />
+    </folder>
+    <folder name="System Files">
+      <file name="$(StudioDir)/source/thumb_crt0.s" expand="no" />
+      <file name="$(TargetsDir)/WIZnet/WIZnet_Startup.s" expand="no" />
+      <file name="$(TargetsDir)/WIZnet/W7500x/$(DeviceVectorsFile)" expand="no" />
+    </folder>
+  </project>
+
 </projects>
