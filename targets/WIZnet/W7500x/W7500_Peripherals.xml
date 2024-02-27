@@ -4,7 +4,7 @@
 			<BitField start="0" size="1" name="OSCPD" description="Internal 8MHz RC oscillator power down register" />
 		</Register>
 
-		<Register start="+0x4" size="0" name="PLL_PDR" access="Read/Write" description="PLL power down register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="PLL_PDR" access="Read/Write" description="PLL power down register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="PLLPD" description="PLL power down register" />
 		</Register>
 
