@@ -173,6 +173,162 @@
 
 	</RegisterGroup>
 
+	<RegisterGroup name="NVIC" start="0xE000E100">
+		<Register name="NVIC_ISER0" start="0xE000E100">
+			<BitField name="SSP0" start="0" size="1" />
+			<BitField name="SSP1" start="1" size="1" />
+			<BitField name="UART0" start="2" size="1" />
+			<BitField name="UART1" start="3" size="1" />
+			<BitField name="UART2" start="4" size="1" />
+			<BitField name="GPIO0" start="7" size="1" />
+			<BitField name="GPIO1" start="8" size="1" />
+			<BitField name="GPIO2" start="9" size="1" />
+			<BitField name="GPIO3" start="10" size="1" />
+			<BitField name="DMA" start="11" size="1" />
+			<BitField name="Dualtimer0" start="12" size="1" />
+			<BitField name="Dualtimer1" start="13" size="1" />
+			<BitField name="PWM0" start="14" size="1" />
+			<BitField name="PWM1" start="15" size="1" />
+			<BitField name="PWM2" start="16" size="1" />
+			<BitField name="PWM3" start="17" size="1" />
+			<BitField name="PWM4" start="18" size="1" />
+			<BitField name="PWM5" start="19" size="1" />
+			<BitField name="PWM6" start="20" size="1" />
+			<BitField name="PWM7" start="21" size="1" />
+			<BitField name="RTC" start="22" size="1" />
+			<BitField name="ADC" start="23" size="1" />
+			<BitField name="TCPIP" start="24" size="1" />
+			<BitField name="EXT_INT" start="25" size="1" />
+		</Register>
+
+		<Register name="NVIC_ICER0" start="0xE000E180">
+			<BitField name="SSP0" start="0" size="1" />
+			<BitField name="SSP1" start="1" size="1" />
+			<BitField name="UART0" start="2" size="1" />
+			<BitField name="UART1" start="3" size="1" />
+			<BitField name="UART2" start="4" size="1" />
+			<BitField name="GPIO0" start="7" size="1" />
+			<BitField name="GPIO1" start="8" size="1" />
+			<BitField name="GPIO2" start="9" size="1" />
+			<BitField name="GPIO3" start="10" size="1" />
+			<BitField name="DMA" start="11" size="1" />
+			<BitField name="Dualtimer0" start="12" size="1" />
+			<BitField name="Dualtimer1" start="13" size="1" />
+			<BitField name="PWM0" start="14" size="1" />
+			<BitField name="PWM1" start="15" size="1" />
+			<BitField name="PWM2" start="16" size="1" />
+			<BitField name="PWM3" start="17" size="1" />
+			<BitField name="PWM4" start="18" size="1" />
+			<BitField name="PWM5" start="19" size="1" />
+			<BitField name="PWM6" start="20" size="1" />
+			<BitField name="PWM7" start="21" size="1" />
+			<BitField name="RTC" start="22" size="1" />
+			<BitField name="ADC" start="23" size="1" />
+			<BitField name="TCPIP" start="24" size="1" />
+			<BitField name="EXT_INT" start="25" size="1" />
+		</Register>
+
+		<Register name="NVIC_ISPR0" start="0xE000E200">
+			<BitField name="SSP0" start="0" size="1" />
+			<BitField name="SSP1" start="1" size="1" />
+			<BitField name="UART0" start="2" size="1" />
+			<BitField name="UART1" start="3" size="1" />
+			<BitField name="UART2" start="4" size="1" />
+			<BitField name="GPIO0" start="7" size="1" />
+			<BitField name="GPIO1" start="8" size="1" />
+			<BitField name="GPIO2" start="9" size="1" />
+			<BitField name="GPIO3" start="10" size="1" />
+			<BitField name="DMA" start="11" size="1" />
+			<BitField name="Dualtimer0" start="12" size="1" />
+			<BitField name="Dualtimer1" start="13" size="1" />
+			<BitField name="PWM0" start="14" size="1" />
+			<BitField name="PWM1" start="15" size="1" />
+			<BitField name="PWM2" start="16" size="1" />
+			<BitField name="PWM3" start="17" size="1" />
+			<BitField name="PWM4" start="18" size="1" />
+			<BitField name="PWM5" start="19" size="1" />
+			<BitField name="PWM6" start="20" size="1" />
+			<BitField name="PWM7" start="21" size="1" />
+			<BitField name="RTC" start="22" size="1" />
+			<BitField name="ADC" start="23" size="1" />
+			<BitField name="TCPIP" start="24" size="1" />
+			<BitField name="EXT_INT" start="25" size="1" />
+		</Register>
+
+		<Register name="NVIC_ICPR0" start="0xE000E280">
+			<BitField name="SSP0" start="0" size="1" />
+			<BitField name="SSP1" start="1" size="1" />
+			<BitField name="UART0" start="2" size="1" />
+			<BitField name="UART1" start="3" size="1" />
+			<BitField name="UART2" start="4" size="1" />
+			<BitField name="GPIO0" start="7" size="1" />
+			<BitField name="GPIO1" start="8" size="1" />
+			<BitField name="GPIO2" start="9" size="1" />
+			<BitField name="GPIO3" start="10" size="1" />
+			<BitField name="DMA" start="11" size="1" />
+			<BitField name="Dualtimer0" start="12" size="1" />
+			<BitField name="Dualtimer1" start="13" size="1" />
+			<BitField name="PWM0" start="14" size="1" />
+			<BitField name="PWM1" start="15" size="1" />
+			<BitField name="PWM2" start="16" size="1" />
+			<BitField name="PWM3" start="17" size="1" />
+			<BitField name="PWM4" start="18" size="1" />
+			<BitField name="PWM5" start="19" size="1" />
+			<BitField name="PWM6" start="20" size="1" />
+			<BitField name="PWM7" start="21" size="1" />
+			<BitField name="RTC" start="22" size="1" />
+			<BitField name="ADC" start="23" size="1" />
+			<BitField name="TCPIP" start="24" size="1" />
+			<BitField name="EXT_INT" start="25" size="1" />
+		</Register>
+
+		<Register name="NVIC_IPR0" start="0xE000E400">
+			<BitField name="SSP0" start="6" size="2" />
+			<BitField name="SSP1" start="14" size="2" />
+			<BitField name="UART0" start="22" size="2" />
+			<BitField name="UART1" start="30" size="2" />
+		</Register>
+
+		<Register name="NVIC_IPR1" start="0xE000E404">
+			<BitField name="UART2" start="6" size="2" />
+			<BitField name="GPIO0" start="30" size="2" />
+		</Register>
+
+		<Register name="NVIC_IPR2" start="0xE000E408">
+			<BitField name="GPIO1" start="6" size="2" />
+			<BitField name="GPIO2" start="14" size="2" />
+			<BitField name="GPIO3" start="22" size="2" />
+			<BitField name="DMA" start="30" size="2" />
+		</Register>
+	
+		<Register name="NVIC_IPR3" start="0xE000E40C">
+			<BitField name="Dualtimer0" start="6" size="2" />
+			<BitField name="Dualtimer1" start="14" size="2" />
+			<BitField name="PWM0" start="22" size="2" />
+			<BitField name="PWM1" start="30" size="2" />
+		</Register>
+
+		<Register name="NVIC_IPR4" start="0xE000E410">
+			<BitField name="PWM2" start="6" size="2" />
+			<BitField name="PWM3" start="14" size="2" />
+			<BitField name="PWM4" start="22" size="2" />
+			<BitField name="PWM5" start="30" size="2" />
+		</Register>
+
+		<Register name="NVIC_IPR5" start="0xE000E414">
+			<BitField name="PWM6" start="6" size="2" />
+			<BitField name="PWM7" start="14" size="2" />
+			<BitField name="RTC" start="22" size="2" />
+			<BitField name="ADC" start="30" size="2" />
+		</Register>
+
+		<Register name="NVIC_IPR6" start="0xE000E418">
+			<BitField name="TCPIP" start="6" size="2" />
+			<BitField name="EXT_INT" start="14" size="2" />
+		</Register>
+
+	</RegisterGroup>
+
 	<RegisterGroup name="SCB" start="0xE000ED00" description="System control block">
 		<Register start="+0x0" size="0" name="CPUID" access="ReadOnly" description="CPUID base register" reset_value="0x410FC241" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="Revision" description="Revision number" />
