@@ -155,4 +155,51 @@
 
 	</project>
 
+	<project cpu_manufacturer="WIZnet" cpu_name="iMCU" cpu_generic_name="iMCU" board_manufacturer="" board_name="" name="iMCU Executable(yss OS)" description="An executable for WIZnet iMCU for yss OS." type="Executable" template_name="iMCU_EXE_yssOS">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+		<configuration name="$(Configuration)" />
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/WIZnet/W7500x/W7500_Target.js" />
+		<property name="target_reset_script" configuration="RAM" value="Reset()" />
+		<property name="target_reset_script" configuration="Flash" value="FLASHReset()" />
+		<property name="arm_target_loader_can_lock_all" configuration="Flash" value="No" />
+		<property name="arm_target_loader_can_unlock_all" configuration="Flash" value="No" />
+		<property name="arm_target_loader_can_lock_range" configuration="Flash" value="No" />
+		<property name="arm_target_loader_can_unlock_range" configuration="Flash" value="No" />
+		<property name="arm_target_trace_interface_type" value="None" />
+		<property name="arm_linker_jtag_pad_pre_dr" value="1" />
+		<property name="arm_linker_jtag_pad_pre_ir" value="5" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="512" choose="yes" />
+		<property name="arm_linker_process_stack_size" value="512"  choose="yes" />
+		<property name="arm_linker_heap_size" value="8192" choose="yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(TargetsDir)/WIZnet/W7500x" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/WIZnet/propertyGroups.xml" />
+		<propertygroup name="Target" value="W7500" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<propertygroup name="CMSIS_CORE" value="Yes" />
+
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<folder Name="app" exclude="" filter="" path="app" recurse="Yes" />
+			<folder Name="yss" exclude="" filter="" path="yss" recurse="Yes" />
+		</folder>
+
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no" />
+			<file name="$(TargetsDir)/WIZnet/WIZnet_Startup.s" expand="no" />
+			<file name="$(TargetsDir)/WIZnet/$(DeviceVectorsFile)" expand="no" />
+		</folder>
+
+	</project>
+
 </projects>

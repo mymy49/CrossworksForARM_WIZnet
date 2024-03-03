@@ -325,7 +325,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket0" start="0x46010000" description="Tcp/ip core Offload Engine Socket0 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -333,11 +333,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -345,7 +345,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -353,7 +353,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -361,15 +361,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -464,7 +464,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket1" start="0x46014000" description="Tcp/ip core Offload Engine Socket1 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -472,11 +472,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -484,7 +484,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -492,7 +492,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -500,15 +500,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -603,7 +603,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket2" start="0x46018000" description="Tcp/ip core Offload Engine Socket2 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -611,11 +611,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -623,7 +623,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -631,7 +631,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -639,15 +639,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -742,7 +742,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket3" start="0x4601C000" description="Tcp/ip core Offload Engine Socket3 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -750,11 +750,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -762,7 +762,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -770,7 +770,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -778,15 +778,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -881,7 +881,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket4" start="0x46020000" description="Tcp/ip core Offload Engine Socket4 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -889,11 +889,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -901,7 +901,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -909,7 +909,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -917,15 +917,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -1020,7 +1020,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket5" start="0x46024000" description="Tcp/ip core Offload Engine Socket5 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -1028,11 +1028,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -1040,7 +1040,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -1048,7 +1048,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -1056,15 +1056,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -1159,7 +1159,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket6" start="0x46028000" description="Tcp/ip core Offload Engine Socket6 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -1167,11 +1167,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -1179,7 +1179,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -1187,7 +1187,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -1195,15 +1195,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
@@ -1298,7 +1298,7 @@
 	</RegisterGroup>
 
 	<RegisterGroup name="TOE_Socket7" start="0x4602C000" description="Tcp/ip core Offload Engine Socket7 register">
-		<Register start="+0x0" size="0" name="SnMR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x0" size="0" name="Sn_MR" access="Read/Write" description="Socket n Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="4" name="MODE" description="These bits configures the protocol mode" />
 			<BitField start="4" size="1" name="UNICAST" description="UNICAST Blocking in UDP mode" />
 			<BitField start="5" size="1" name="NDA" description="Use No Delayed ACK, Multicast and Multicast Blocking mode" />
@@ -1306,11 +1306,11 @@
 			<BitField start="7" size="1" name="MACFEN" description="Multicasting and MAC Filter Enable mode" />
 		</Register>
 
-		<Register start="+0x10" size="0" name="SnCR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x10" size="0" name="Sn_CR" access="Read/Write" description="Socket n Command Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="CMD" description="This is used to set the command for Socket n" />
 		</Register>
 
-		<Register start="+0x20" size="0" name="SnIR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x20" size="0" name="Sn_IR" access="ReadOnly" description="Socket n Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="This is issued one time when the connection with peer is successful and then Sn_SR is changed to SOCK_ESTABLISHED" />
 			<BitField start="1" size="1" name="DISCONNECT" description="This is issued when FIN or FIN/ACK packet is received" />
 			<BitField start="2" size="1" name="RECV" description="his is issued whenever data is received from a peer" />
@@ -1318,7 +1318,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="This is issued when SEND command is completed" />
 		</Register>
 
-		<Register start="+0x24" size="0" name="SnIMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
+		<Register start="+0x24" size="0" name="Sn_IMR" access="Read/Write" description="Socket n Interrupt Mask Register" reset_value="0x000000FF" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Mask" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Mask" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Mask" />
@@ -1326,7 +1326,7 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Mask" />
 		</Register>
 
-		<Register start="+0x28" size="0" name="SnICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x28" size="0" name="Sn_ICR" access="Read/Write" description="Socket n Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="1" name="CONNECT" description="CONNECT Interrupt Clear" />
 			<BitField start="1" size="1" name="DISCONNECT" description="DISCONNECT Interrupt Clear" />
 			<BitField start="2" size="1" name="RECV" description="RECV Interrupt Clear" />
@@ -1334,15 +1334,15 @@
 			<BitField start="4" size="1" name="SENDOK" description="SENDOK Interrupt Clear" />
 		</Register>
 
-		<Register start="+0x30" size="0" name="SnSR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x30" size="0" name="Sn_SR" access="Read/Write" description="Socket n Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="SR" description="SR indicates the status of Socket n" />
 		</Register>
 
-		<Register start="+0x100" size="0" name="SnPNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x100" size="0" name="Sn_PNR" access="Read/Write" description="Socket n Protocol Number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="PNR" description="This IP Protocol Register is user to set up the Protocol Field of IP Header at the IP layer RAW mode" />
 		</Register>
 
-		<Register start="+0x104" size="0" name="SnTOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x104" size="0" name="Sn_TOSR" access="Read/Write" description="Socket n IP Type of Service Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="TOS" description="TOS configures the TOS(Type Of Service field in IP Header) of Socket n" />
 		</Register>
 
