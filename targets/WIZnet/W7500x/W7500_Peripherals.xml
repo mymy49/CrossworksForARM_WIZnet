@@ -173,6 +173,157 @@
 
 	</RegisterGroup>
 
+	<RegisterGroup name="TOE_Common" start="0x46000000" description="Tcp/ip core Offload Engine">
+		<Register start="+0x0" size="0" name="VERSIONR" access="Read/Write" description="TOE Version Register" reset_value="0x00000005" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="VERSION" description="indicates the TOE version as 0x05." />
+		</Register>
+
+		<Register start="+0x2000" size="0" name="TCKCNTR" access="Read/Write" description="Ticker Counter Register" reset_value="0x000007D0" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="TCKCNT" description="Ticker counter register is used Tick counter of 100usec. for internal timer of TOE. The unit of tick is HCLK. RTR, Sn_RTR, Sn_KATMR operates on the value of this register." />
+		</Register>
+
+		<Register start="+0x2100" size="0" name="IR" access="ReadOnly" description="Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="WOL" description="Magic Packet" />
+			<BitField start="5" size="1" name="PPPoE" description="PPPoE Close" />
+			<BitField start="6" size="1" name="UNREACH" description="Destination unreachable" />
+			<BitField start="7" size="1" name="Conflict" description="IP Conflict" />
+		</Register>
+
+		<Register start="+0x2104" size="0" name="IMR" access="Read/Write" description="Interrupt Mask Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="WOL" description="Magic Packet" />
+			<BitField start="5" size="1" name="PPPoE" description="PPPoE Close" />
+			<BitField start="6" size="1" name="UNREACH" description="Destination unreachable" />
+			<BitField start="7" size="1" name="Conflict" description="IP Conflict" />
+		</Register>
+
+		<Register start="+0x2108" size="0" name="IRCR" access="Read/Write" description="Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="WOL" description="Magic Packet" />
+			<BitField start="5" size="1" name="PPPoE" description="PPPoE Close" />
+			<BitField start="6" size="1" name="UNREACH" description="Destination unreachable" />
+			<BitField start="7" size="1" name="Conflict" description="IP Conflict" />
+		</Register>
+
+		<Register start="+0x2110" size="0" name="SIR" access="Read/Write" description="Socket Interrupt Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="S0" description="Socket0 Interrupt" />
+			<BitField start="1" size="1" name="S1" description="Socket1 Interrupt" />
+			<BitField start="2" size="1" name="S2" description="Socket2 Interrupt" />
+			<BitField start="3" size="1" name="S3" description="Socket3 Interrupt" />
+			<BitField start="4" size="1" name="S4" description="Socket4 Interrupt" />
+			<BitField start="5" size="1" name="S5" description="Socket5 Interrupt" />
+			<BitField start="6" size="1" name="S6" description="Socket6 Interrupt" />
+			<BitField start="7" size="1" name="S7" description="Socket7 Interrupt" />
+		</Register>
+
+		<Register start="+0x2114" size="0" name="SIMR" access="Read/Write" description="Socket Interrupt Mask Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="S0" description="Socket0 Interrupt Mask" />
+			<BitField start="1" size="1" name="S1" description="Socket1 Interrupt Mask" />
+			<BitField start="2" size="1" name="S2" description="Socket2 Interrupt Mask" />
+			<BitField start="3" size="1" name="S3" description="Socket3 Interrupt Mask" />
+			<BitField start="4" size="1" name="S4" description="Socket4 Interrupt Mask" />
+			<BitField start="5" size="1" name="S5" description="Socket5 Interrupt Mask" />
+			<BitField start="6" size="1" name="S6" description="Socket6 Interrupt Mask" />
+			<BitField start="7" size="1" name="S7" description="Socket7 Interrupt Mask" />
+		</Register>
+
+		<Register start="+0x2300" size="0" name="MR" access="Read/Write" description="Mode Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="1" size="1" name="FA" description="" />
+			<BitField start="2" size="1" name="NSC" description="MACRAW No Size Check" />
+			<BitField start="4" size="1" name="PB" description="Ping Block" />
+			<BitField start="5" size="1" name="WOL" description="Wake on Lan" />
+			<BitField start="7" size="1" name="RST" description="Software Reset" />
+			<BitField start="10" size="1" name="NTR" description="No Send TCP Reset Packet" />
+		</Register>
+
+		<Register start="+0x2400" size="0" name="PTIMER" access="Read/Write" description="PPP Link Control Protocol Request Timer Register" reset_value="0x00000028" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="PTIME" description="PTIME configures the time for sending LCP echo request. The unit of time is 25ms" />
+		</Register>
+
+		<Register start="+0x2404" size="0" name="PMAGICR" access="Read/Write" description="PPP Link Control Protocol Magic number Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="PMAGIC" description="PMAGIC configures the 4bytes magic number to be used in LCP echo request." />
+		</Register>
+
+		<Register start="+0x2408" size="0" name="PHARH" access="Read/Write" description="Destination Hardware Address Register in PPPoE" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="PHAR3" description="configures Destination hardware address" />
+			<BitField start="8" size="8" name="PHAR2" description="configures Destination hardware address" />
+			<BitField start="16" size="8" name="PHAR1" description="configures Destination hardware address" />
+			<BitField start="24" size="8" name="PHAR0" description="configures Destination hardware address" />
+		</Register>
+
+		<Register start="+0x240C" size="0" name="PHARL" access="Read/Write" description="Destination Hardware Address Register in PPPoE" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="16" size="8" name="PHAR5" description="configures Destination hardware address" />
+			<BitField start="24" size="8" name="PHAR4" description="configures Destination hardware address" />
+		</Register>
+
+		<Register start="+0x2410" size="0" name="PSIDR" access="Read/Write" description="Session ID Register in PPPoE" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="PSID" description="should be written to the PPPoE sever session ID acquired in PPPoE connection process." />
+		</Register>
+
+		<Register start="+0x2414" size="0" name="PMRUR" access="Read/Write" description="Maximum Receive Unit Register in PPPoE" reset_value="0x0000FFFF" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="PMSS0" description="PMRUR configures the maximum receive unit of PPPoE." />
+			<BitField start="8" size="8" name="PMSS1" description="PMRUR configures the maximum receive unit of PPPoE." />
+		</Register>
+
+		<Register start="+0x6000" size="0" name="SHARH" access="Read/Write" description="Source Hardware Address Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="SHAR3" description="SHAR configures the source hardware address" />
+			<BitField start="8" size="8" name="SHAR2" description="SHAR configures the source hardware address" />
+			<BitField start="16" size="8" name="SHAR1" description="SHAR configures the source hardware address" />
+			<BitField start="24" size="8" name="SHAR0" description="SHAR configures the source hardware address" />
+		</Register>
+
+		<Register start="+0x6004" size="0" name="SHARL" access="Read/Write" description="Source Hardware Address Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="16" size="8" name="SHAR5" description="SHAR configures the source hardware address" />
+			<BitField start="24" size="8" name="SHAR4" description="SHAR configures the source hardware address" />
+		</Register>
+
+		<Register start="+0x6008" size="0" name="GAR" access="Read/Write" description="Gateway Address" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="GA3" description="configures the default gateway address" />
+			<BitField start="8" size="8" name="GA2" description="configures the default gateway address" />
+			<BitField start="16" size="8" name="GA1" description="configures the default gateway address" />
+			<BitField start="24" size="8" name="GA0" description="configures the default gateway address" />
+		</Register>
+
+		<Register start="+0x600C" size="0" name="SUBR" access="Read/Write" description="Subnet Mask Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="SUB3" description="SUBR configures the subnet mask address." />
+			<BitField start="8" size="8" name="SUB2" description="SUBR configures the subnet mask address." />
+			<BitField start="16" size="8" name="SUB1" description="SUBR configures the subnet mask address." />
+			<BitField start="24" size="8" name="SUB0" description="SUBR configures the subnet mask address." />
+		</Register>
+
+		<Register start="+0x6010" size="0" name="SIPR" access="Read/Write" description="Source IP address Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="SIP3" description="SIPR configures the source IP address" />
+			<BitField start="8" size="8" name="SIP2" description="SIPR configures the source IP address" />
+			<BitField start="16" size="8" name="SIP1" description="SIPR configures the source IP address" />
+			<BitField start="24" size="8" name="SIP0" description="SIPR configures the source IP address" />
+		</Register>
+
+		<Register start="+0x6020" size="0" name="NCONFLR" access="Read/Write" description="Network Configuration Lock Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="NCONFL3" description="" />
+			<BitField start="8" size="8" name="NCONFL2" description="" />
+			<BitField start="16" size="8" name="NCONFL1" description="" />
+			<BitField start="24" size="8" name="NCONFL0" description="" />
+		</Register>
+
+		<Register start="+0x6040" size="0" name="RTR" access="Read/Write" description="Retry Time Register" reset_value="0x000007D0" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="RT" description="RTR configures the retransmission timeout period" />
+		</Register>
+
+		<Register start="+0x6044" size="0" name="RCR" access="Read/Write" description="Retry Counter Register" reset_value="0x00000008" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="RC" description="RC configures the number of time of retransmission" />
+		</Register>
+
+		<Register start="+0x6050" size="0" name="UIPR" access="Read/Write" description="Unreachable IP address Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="UIP3" description="" />
+			<BitField start="8" size="8" name="UIP2" description="" />
+			<BitField start="16" size="8" name="UIP1" description="" />
+			<BitField start="24" size="8" name="UIP0" description="" />
+		</Register>
+
+		<Register start="+0x6054" size="0" name="UPORTR" access="Read/Write" description="Unreachable Port Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="UPORT" description="Destination port number bits" />
+		</Register>
+
+	</RegisterGroup>
+
 	<RegisterGroup name="NVIC" start="0xE000E100">
 		<Register name="NVIC_ISER0" start="0xE000E100">
 			<BitField name="SSP0" start="0" size="1" />
