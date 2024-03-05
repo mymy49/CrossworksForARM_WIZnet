@@ -173,6 +173,854 @@
 
 	</RegisterGroup>
 
+	<RegisterGroup name="GPIOA" start="0x42000000" description="GPIOA Registers">
+		<Register start="+0x0" size="0" name="DATA" access="ReadOnly" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="DAT0" description="Port input data bit" />
+			<BitField start="1" size="1" name="DAT1" description="Port input data bit" />
+			<BitField start="2" size="1" name="DAT2" description="Port input data bit" />
+			<BitField start="3" size="1" name="DAT3" description="Port input data bit" />
+			<BitField start="4" size="1" name="DAT4" description="Port input data bit" />
+			<BitField start="5" size="1" name="DAT5" description="Port input data bit" />
+			<BitField start="6" size="1" name="DAT6" description="Port input data bit" />
+			<BitField start="7" size="1" name="DAT7" description="Port input data bit" />
+			<BitField start="8" size="1" name="DAT8" description="Port input data bit" />
+			<BitField start="9" size="1" name="DAT9" description="Port input data bit" />
+			<BitField start="10" size="1" name="DAT10" description="Port input data bit" />
+			<BitField start="11" size="1" name="DAT11" description="Port input data bit" />
+			<BitField start="12" size="1" name="DAT12" description="Port input data bit" />
+			<BitField start="13" size="1" name="DAT13" description="Port input data bit" />
+			<BitField start="14" size="1" name="DAT14" description="Port input data bit" />
+			<BitField start="15" size="1" name="DAT15" description="Port input data bit" />
+		</Register>
+
+		<Register start="+0x4" size="0" name="DATAOUT" access="Read/Write" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="DA0" description="Port out data bit" />
+			<BitField start="1" size="1" name="DA1" description="Port out data bit" />
+			<BitField start="2" size="1" name="DA2" description="Port out data bit" />
+			<BitField start="3" size="1" name="DA3" description="Port out data bit" />
+			<BitField start="4" size="1" name="DA4" description="Port out data bit" />
+			<BitField start="5" size="1" name="DA5" description="Port out data bit" />
+			<BitField start="6" size="1" name="DA6" description="Port out data bit" />
+			<BitField start="7" size="1" name="DA7" description="Port out data bit" />
+			<BitField start="8" size="1" name="DA8" description="Port out data bit" />
+			<BitField start="9" size="1" name="DA9" description="Port out data bit" />
+			<BitField start="10" size="1" name="DA10" description="Port out data bit" />
+			<BitField start="11" size="1" name="DA11" description="Port out data bit" />
+			<BitField start="12" size="1" name="DA12" description="Port out data bit" />
+			<BitField start="13" size="1" name="DA13" description="Port out data bit" />
+			<BitField start="14" size="1" name="DA14" description="Port out data bit" />
+			<BitField start="15" size="1" name="DA15" description="Port out data bit" />
+		</Register>
+
+		<Register start="+0x10" size="0" name="OUTENSET" access="Read/Write" description="GPIO Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ES0" description="sets the corresponding output enable bit" />
+			<BitField start="1" size="1" name="ES1" description="sets the corresponding output enable bit" />
+			<BitField start="2" size="1" name="ES2" description="sets the corresponding output enable bit" />
+			<BitField start="3" size="1" name="ES3" description="sets the corresponding output enable bit" />
+			<BitField start="4" size="1" name="ES4" description="sets the corresponding output enable bit" />
+			<BitField start="5" size="1" name="ES5" description="sets the corresponding output enable bit" />
+			<BitField start="6" size="1" name="ES6" description="sets the corresponding output enable bit" />
+			<BitField start="7" size="1" name="ES7" description="sets the corresponding output enable bit" />
+			<BitField start="8" size="1" name="ES8" description="sets the corresponding output enable bit" />
+			<BitField start="9" size="1" name="ES9" description="sets the corresponding output enable bit" />
+			<BitField start="10" size="1" name="ES10" description="sets the corresponding output enable bit" />
+			<BitField start="11" size="1" name="ES11" description="sets the corresponding output enable bit" />
+			<BitField start="12" size="1" name="ES12" description="sets the corresponding output enable bit" />
+			<BitField start="13" size="1" name="ES13" description="sets the corresponding output enable bit" />
+			<BitField start="14" size="1" name="ES14" description="sets the corresponding output enable bit" />
+			<BitField start="15" size="1" name="ES15" description="sets the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="OUTENCLR" access="Read/Write" description="GPIO Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="EC0" description="clears the corresponding output enable bit" />
+			<BitField start="1" size="1" name="EC1" description="clears the corresponding output enable bit" />
+			<BitField start="2" size="1" name="EC2" description="clears the corresponding output enable bit" />
+			<BitField start="3" size="1" name="EC3" description="clears the corresponding output enable bit" />
+			<BitField start="4" size="1" name="EC4" description="clears the corresponding output enable bit" />
+			<BitField start="5" size="1" name="EC5" description="clears the corresponding output enable bit" />
+			<BitField start="6" size="1" name="EC6" description="clears the corresponding output enable bit" />
+			<BitField start="7" size="1" name="EC7" description="clears the corresponding output enable bit" />
+			<BitField start="8" size="1" name="EC8" description="clears the corresponding output enable bit" />
+			<BitField start="9" size="1" name="EC9" description="clears the corresponding output enable bit" />
+			<BitField start="10" size="1" name="EC10" description="clears the corresponding output enable bit" />
+			<BitField start="11" size="1" name="EC11" description="clears the corresponding output enable bit" />
+			<BitField start="12" size="1" name="EC12" description="clears the corresponding output enable bit" />
+			<BitField start="13" size="1" name="EC13" description="clears the corresponding output enable bit" />
+			<BitField start="14" size="1" name="EC14" description="clears the corresponding output enable bit" />
+			<BitField start="15" size="1" name="EC15" description="clears the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="INTENSET" access="Read/Write" description="GPIO Interrupt Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IES0" description="sets the interrupt enable bit" />
+			<BitField start="1" size="1" name="IES1" description="sets the interrupt enable bit" />
+			<BitField start="2" size="1" name="IES2" description="sets the interrupt enable bit" />
+			<BitField start="3" size="1" name="IES3" description="sets the interrupt enable bit" />
+			<BitField start="4" size="1" name="IES4" description="sets the interrupt enable bit" />
+			<BitField start="5" size="1" name="IES5" description="sets the interrupt enable bit" />
+			<BitField start="6" size="1" name="IES6" description="sets the interrupt enable bit" />
+			<BitField start="7" size="1" name="IES7" description="sets the interrupt enable bit" />
+			<BitField start="8" size="1" name="IES8" description="sets the interrupt enable bit" />
+			<BitField start="9" size="1" name="IES9" description="sets the interrupt enable bit" />
+			<BitField start="10" size="1" name="IES10" description="sets the interrupt enable bit" />
+			<BitField start="11" size="1" name="IES11" description="sets the interrupt enable bit" />
+			<BitField start="12" size="1" name="IES12" description="sets the interrupt enable bit" />
+			<BitField start="13" size="1" name="IES13" description="sets the interrupt enable bit" />
+			<BitField start="14" size="1" name="IES14" description="sets the interrupt enable bit" />
+			<BitField start="15" size="1" name="IES15" description="sets the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x24" size="0" name="INTENCLR" access="Read/Write" description="GPIO Interrupt Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IEC0" description="clears the interrupt enable bit" />
+			<BitField start="1" size="1" name="IEC1" description="clears the interrupt enable bit" />
+			<BitField start="2" size="1" name="IEC2" description="clears the interrupt enable bit" />
+			<BitField start="3" size="1" name="IEC3" description="clears the interrupt enable bit" />
+			<BitField start="4" size="1" name="IEC4" description="clears the interrupt enable bit" />
+			<BitField start="5" size="1" name="IEC5" description="clears the interrupt enable bit" />
+			<BitField start="6" size="1" name="IEC6" description="clears the interrupt enable bit" />
+			<BitField start="7" size="1" name="IEC7" description="clears the interrupt enable bit" />
+			<BitField start="8" size="1" name="IEC8" description="clears the interrupt enable bit" />
+			<BitField start="9" size="1" name="IEC9" description="clears the interrupt enable bit" />
+			<BitField start="10" size="1" name="IEC10" description="clears the interrupt enable bit" />
+			<BitField start="11" size="1" name="IEC11" description="clears the interrupt enable bit" />
+			<BitField start="12" size="1" name="IEC12" description="clears the interrupt enable bit" />
+			<BitField start="13" size="1" name="IEC13" description="clears the interrupt enable bit" />
+			<BitField start="14" size="1" name="IEC14" description="clears the interrupt enable bit" />
+			<BitField start="15" size="1" name="IEC15" description="clears the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x28" size="0" name="INTTYPESET" access="Read/Write" description="GPIO Interrupt Type Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITS0" description="sets the interrupt type bit" />
+			<BitField start="1" size="1" name="ITS1" description="sets the interrupt type bit" />
+			<BitField start="2" size="1" name="ITS2" description="sets the interrupt type bit" />
+			<BitField start="3" size="1" name="ITS3" description="sets the interrupt type bit" />
+			<BitField start="4" size="1" name="ITS4" description="sets the interrupt type bit" />
+			<BitField start="5" size="1" name="ITS5" description="sets the interrupt type bit" />
+			<BitField start="6" size="1" name="ITS6" description="sets the interrupt type bit" />
+			<BitField start="7" size="1" name="ITS7" description="sets the interrupt type bit" />
+			<BitField start="8" size="1" name="ITS8" description="sets the interrupt type bit" />
+			<BitField start="9" size="1" name="ITS9" description="sets the interrupt type bit" />
+			<BitField start="10" size="1" name="ITS10" description="sets the interrupt type bit" />
+			<BitField start="11" size="1" name="ITS11" description="sets the interrupt type bit" />
+			<BitField start="12" size="1" name="ITS12" description="sets the interrupt type bit" />
+			<BitField start="13" size="1" name="ITS13" description="sets the interrupt type bit" />
+			<BitField start="14" size="1" name="ITS14" description="sets the interrupt type bit" />
+			<BitField start="15" size="1" name="ITS15" description="sets the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x2C" size="0" name="INTTYPECLR" access="Read/Write" description="GPIO Interrupt Type Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITC0" description="clears the interrupt type bit" />
+			<BitField start="1" size="1" name="ITC1" description="clears the interrupt type bit" />
+			<BitField start="2" size="1" name="ITC2" description="clears the interrupt type bit" />
+			<BitField start="3" size="1" name="ITC3" description="clears the interrupt type bit" />
+			<BitField start="4" size="1" name="ITC4" description="clears the interrupt type bit" />
+			<BitField start="5" size="1" name="ITC5" description="clears the interrupt type bit" />
+			<BitField start="6" size="1" name="ITC6" description="clears the interrupt type bit" />
+			<BitField start="7" size="1" name="ITC7" description="clears the interrupt type bit" />
+			<BitField start="8" size="1" name="ITC8" description="clears the interrupt type bit" />
+			<BitField start="9" size="1" name="ITC9" description="clears the interrupt type bit" />
+			<BitField start="10" size="1" name="ITC10" description="clears the interrupt type bit" />
+			<BitField start="11" size="1" name="ITC11" description="clears the interrupt type bit" />
+			<BitField start="12" size="1" name="ITC12" description="clears the interrupt type bit" />
+			<BitField start="13" size="1" name="ITC13" description="clears the interrupt type bit" />
+			<BitField start="14" size="1" name="ITC14" description="clears the interrupt type bit" />
+			<BitField start="15" size="1" name="ITC15" description="clears the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x30" size="0" name="INTPOLSET" access="Read/Write" description="GPIO Interrupt Polarity Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPS0" description="sets the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPS1" description="sets the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPS2" description="sets the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPS3" description="sets the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPS4" description="sets the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPS5" description="sets the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPS6" description="sets the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPS7" description="sets the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPS8" description="sets the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPS9" description="sets the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPS10" description="sets the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPS11" description="sets the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPS12" description="sets the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPS13" description="sets the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPS14" description="sets the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPS15" description="sets the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x34" size="0" name="INTPOLCLR" access="Read/Write" description="GPIO Interrupt Polarity Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPC0" description="clears the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPC1" description="clears the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPC2" description="clears the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPC3" description="clears the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPC4" description="clears the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPC5" description="clears the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPC6" description="clears the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPC7" description="clears the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPC8" description="clears the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPC9" description="clears the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPC10" description="clears the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPC11" description="clears the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPC12" description="clears the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPC13" description="clears the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPC14" description="clears the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPC15" description="clears the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x38" size="0" name="INTSTATUS" access="Read/Write" description="GPIO Interrupt Status/Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ISC0" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="1" size="1" name="ISC1" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="2" size="1" name="ISC2" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="3" size="1" name="ISC3" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="4" size="1" name="ISC4" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="5" size="1" name="ISC5" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="6" size="1" name="ISC6" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="7" size="1" name="ISC7" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="8" size="1" name="ISC8" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="9" size="1" name="ISC9" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="10" size="1" name="ISC10" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="11" size="1" name="ISC11" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="12" size="1" name="ISC12" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="13" size="1" name="ISC13" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="14" size="1" name="ISC14" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="15" size="1" name="ISC15" description="writing ‘1’ is request to clear the interrupt" />
+		</Register>
+
+	</RegisterGroup>
+
+	<RegisterGroup name="GPIOB" start="0x43000000" description="GPIOB Registers">
+		<Register start="+0x0" size="0" name="DATA" access="ReadOnly" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="DAT0" description="Port input data bit" />
+			<BitField start="1" size="1" name="DAT1" description="Port input data bit" />
+			<BitField start="2" size="1" name="DAT2" description="Port input data bit" />
+			<BitField start="3" size="1" name="DAT3" description="Port input data bit" />
+			<BitField start="4" size="1" name="DAT4" description="Port input data bit" />
+			<BitField start="5" size="1" name="DAT5" description="Port input data bit" />
+			<BitField start="6" size="1" name="DAT6" description="Port input data bit" />
+			<BitField start="7" size="1" name="DAT7" description="Port input data bit" />
+			<BitField start="8" size="1" name="DAT8" description="Port input data bit" />
+			<BitField start="9" size="1" name="DAT9" description="Port input data bit" />
+			<BitField start="10" size="1" name="DAT10" description="Port input data bit" />
+			<BitField start="11" size="1" name="DAT11" description="Port input data bit" />
+			<BitField start="12" size="1" name="DAT12" description="Port input data bit" />
+			<BitField start="13" size="1" name="DAT13" description="Port input data bit" />
+			<BitField start="14" size="1" name="DAT14" description="Port input data bit" />
+			<BitField start="15" size="1" name="DAT15" description="Port input data bit" />
+		</Register>
+
+		<Register start="+0x4" size="0" name="DATAOUT" access="Read/Write" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="DA0" description="Port out data bit" />
+			<BitField start="1" size="1" name="DA1" description="Port out data bit" />
+			<BitField start="2" size="1" name="DA2" description="Port out data bit" />
+			<BitField start="3" size="1" name="DA3" description="Port out data bit" />
+			<BitField start="4" size="1" name="DA4" description="Port out data bit" />
+			<BitField start="5" size="1" name="DA5" description="Port out data bit" />
+			<BitField start="6" size="1" name="DA6" description="Port out data bit" />
+			<BitField start="7" size="1" name="DA7" description="Port out data bit" />
+			<BitField start="8" size="1" name="DA8" description="Port out data bit" />
+			<BitField start="9" size="1" name="DA9" description="Port out data bit" />
+			<BitField start="10" size="1" name="DA10" description="Port out data bit" />
+			<BitField start="11" size="1" name="DA11" description="Port out data bit" />
+			<BitField start="12" size="1" name="DA12" description="Port out data bit" />
+			<BitField start="13" size="1" name="DA13" description="Port out data bit" />
+			<BitField start="14" size="1" name="DA14" description="Port out data bit" />
+			<BitField start="15" size="1" name="DA15" description="Port out data bit" />
+		</Register>
+
+		<Register start="+0x10" size="0" name="OUTENSET" access="Read/Write" description="GPIO Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ES0" description="sets the corresponding output enable bit" />
+			<BitField start="1" size="1" name="ES1" description="sets the corresponding output enable bit" />
+			<BitField start="2" size="1" name="ES2" description="sets the corresponding output enable bit" />
+			<BitField start="3" size="1" name="ES3" description="sets the corresponding output enable bit" />
+			<BitField start="4" size="1" name="ES4" description="sets the corresponding output enable bit" />
+			<BitField start="5" size="1" name="ES5" description="sets the corresponding output enable bit" />
+			<BitField start="6" size="1" name="ES6" description="sets the corresponding output enable bit" />
+			<BitField start="7" size="1" name="ES7" description="sets the corresponding output enable bit" />
+			<BitField start="8" size="1" name="ES8" description="sets the corresponding output enable bit" />
+			<BitField start="9" size="1" name="ES9" description="sets the corresponding output enable bit" />
+			<BitField start="10" size="1" name="ES10" description="sets the corresponding output enable bit" />
+			<BitField start="11" size="1" name="ES11" description="sets the corresponding output enable bit" />
+			<BitField start="12" size="1" name="ES12" description="sets the corresponding output enable bit" />
+			<BitField start="13" size="1" name="ES13" description="sets the corresponding output enable bit" />
+			<BitField start="14" size="1" name="ES14" description="sets the corresponding output enable bit" />
+			<BitField start="15" size="1" name="ES15" description="sets the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="OUTENCLR" access="Read/Write" description="GPIO Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="EC0" description="clears the corresponding output enable bit" />
+			<BitField start="1" size="1" name="EC1" description="clears the corresponding output enable bit" />
+			<BitField start="2" size="1" name="EC2" description="clears the corresponding output enable bit" />
+			<BitField start="3" size="1" name="EC3" description="clears the corresponding output enable bit" />
+			<BitField start="4" size="1" name="EC4" description="clears the corresponding output enable bit" />
+			<BitField start="5" size="1" name="EC5" description="clears the corresponding output enable bit" />
+			<BitField start="6" size="1" name="EC6" description="clears the corresponding output enable bit" />
+			<BitField start="7" size="1" name="EC7" description="clears the corresponding output enable bit" />
+			<BitField start="8" size="1" name="EC8" description="clears the corresponding output enable bit" />
+			<BitField start="9" size="1" name="EC9" description="clears the corresponding output enable bit" />
+			<BitField start="10" size="1" name="EC10" description="clears the corresponding output enable bit" />
+			<BitField start="11" size="1" name="EC11" description="clears the corresponding output enable bit" />
+			<BitField start="12" size="1" name="EC12" description="clears the corresponding output enable bit" />
+			<BitField start="13" size="1" name="EC13" description="clears the corresponding output enable bit" />
+			<BitField start="14" size="1" name="EC14" description="clears the corresponding output enable bit" />
+			<BitField start="15" size="1" name="EC15" description="clears the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="INTENSET" access="Read/Write" description="GPIO Interrupt Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IES0" description="sets the interrupt enable bit" />
+			<BitField start="1" size="1" name="IES1" description="sets the interrupt enable bit" />
+			<BitField start="2" size="1" name="IES2" description="sets the interrupt enable bit" />
+			<BitField start="3" size="1" name="IES3" description="sets the interrupt enable bit" />
+			<BitField start="4" size="1" name="IES4" description="sets the interrupt enable bit" />
+			<BitField start="5" size="1" name="IES5" description="sets the interrupt enable bit" />
+			<BitField start="6" size="1" name="IES6" description="sets the interrupt enable bit" />
+			<BitField start="7" size="1" name="IES7" description="sets the interrupt enable bit" />
+			<BitField start="8" size="1" name="IES8" description="sets the interrupt enable bit" />
+			<BitField start="9" size="1" name="IES9" description="sets the interrupt enable bit" />
+			<BitField start="10" size="1" name="IES10" description="sets the interrupt enable bit" />
+			<BitField start="11" size="1" name="IES11" description="sets the interrupt enable bit" />
+			<BitField start="12" size="1" name="IES12" description="sets the interrupt enable bit" />
+			<BitField start="13" size="1" name="IES13" description="sets the interrupt enable bit" />
+			<BitField start="14" size="1" name="IES14" description="sets the interrupt enable bit" />
+			<BitField start="15" size="1" name="IES15" description="sets the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x24" size="0" name="INTENCLR" access="Read/Write" description="GPIO Interrupt Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IEC0" description="clears the interrupt enable bit" />
+			<BitField start="1" size="1" name="IEC1" description="clears the interrupt enable bit" />
+			<BitField start="2" size="1" name="IEC2" description="clears the interrupt enable bit" />
+			<BitField start="3" size="1" name="IEC3" description="clears the interrupt enable bit" />
+			<BitField start="4" size="1" name="IEC4" description="clears the interrupt enable bit" />
+			<BitField start="5" size="1" name="IEC5" description="clears the interrupt enable bit" />
+			<BitField start="6" size="1" name="IEC6" description="clears the interrupt enable bit" />
+			<BitField start="7" size="1" name="IEC7" description="clears the interrupt enable bit" />
+			<BitField start="8" size="1" name="IEC8" description="clears the interrupt enable bit" />
+			<BitField start="9" size="1" name="IEC9" description="clears the interrupt enable bit" />
+			<BitField start="10" size="1" name="IEC10" description="clears the interrupt enable bit" />
+			<BitField start="11" size="1" name="IEC11" description="clears the interrupt enable bit" />
+			<BitField start="12" size="1" name="IEC12" description="clears the interrupt enable bit" />
+			<BitField start="13" size="1" name="IEC13" description="clears the interrupt enable bit" />
+			<BitField start="14" size="1" name="IEC14" description="clears the interrupt enable bit" />
+			<BitField start="15" size="1" name="IEC15" description="clears the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x28" size="0" name="INTTYPESET" access="Read/Write" description="GPIO Interrupt Type Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITS0" description="sets the interrupt type bit" />
+			<BitField start="1" size="1" name="ITS1" description="sets the interrupt type bit" />
+			<BitField start="2" size="1" name="ITS2" description="sets the interrupt type bit" />
+			<BitField start="3" size="1" name="ITS3" description="sets the interrupt type bit" />
+			<BitField start="4" size="1" name="ITS4" description="sets the interrupt type bit" />
+			<BitField start="5" size="1" name="ITS5" description="sets the interrupt type bit" />
+			<BitField start="6" size="1" name="ITS6" description="sets the interrupt type bit" />
+			<BitField start="7" size="1" name="ITS7" description="sets the interrupt type bit" />
+			<BitField start="8" size="1" name="ITS8" description="sets the interrupt type bit" />
+			<BitField start="9" size="1" name="ITS9" description="sets the interrupt type bit" />
+			<BitField start="10" size="1" name="ITS10" description="sets the interrupt type bit" />
+			<BitField start="11" size="1" name="ITS11" description="sets the interrupt type bit" />
+			<BitField start="12" size="1" name="ITS12" description="sets the interrupt type bit" />
+			<BitField start="13" size="1" name="ITS13" description="sets the interrupt type bit" />
+			<BitField start="14" size="1" name="ITS14" description="sets the interrupt type bit" />
+			<BitField start="15" size="1" name="ITS15" description="sets the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x2C" size="0" name="INTTYPECLR" access="Read/Write" description="GPIO Interrupt Type Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITC0" description="clears the interrupt type bit" />
+			<BitField start="1" size="1" name="ITC1" description="clears the interrupt type bit" />
+			<BitField start="2" size="1" name="ITC2" description="clears the interrupt type bit" />
+			<BitField start="3" size="1" name="ITC3" description="clears the interrupt type bit" />
+			<BitField start="4" size="1" name="ITC4" description="clears the interrupt type bit" />
+			<BitField start="5" size="1" name="ITC5" description="clears the interrupt type bit" />
+			<BitField start="6" size="1" name="ITC6" description="clears the interrupt type bit" />
+			<BitField start="7" size="1" name="ITC7" description="clears the interrupt type bit" />
+			<BitField start="8" size="1" name="ITC8" description="clears the interrupt type bit" />
+			<BitField start="9" size="1" name="ITC9" description="clears the interrupt type bit" />
+			<BitField start="10" size="1" name="ITC10" description="clears the interrupt type bit" />
+			<BitField start="11" size="1" name="ITC11" description="clears the interrupt type bit" />
+			<BitField start="12" size="1" name="ITC12" description="clears the interrupt type bit" />
+			<BitField start="13" size="1" name="ITC13" description="clears the interrupt type bit" />
+			<BitField start="14" size="1" name="ITC14" description="clears the interrupt type bit" />
+			<BitField start="15" size="1" name="ITC15" description="clears the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x30" size="0" name="INTPOLSET" access="Read/Write" description="GPIO Interrupt Polarity Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPS0" description="sets the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPS1" description="sets the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPS2" description="sets the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPS3" description="sets the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPS4" description="sets the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPS5" description="sets the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPS6" description="sets the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPS7" description="sets the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPS8" description="sets the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPS9" description="sets the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPS10" description="sets the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPS11" description="sets the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPS12" description="sets the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPS13" description="sets the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPS14" description="sets the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPS15" description="sets the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x34" size="0" name="INTPOLCLR" access="Read/Write" description="GPIO Interrupt Polarity Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPC0" description="clears the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPC1" description="clears the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPC2" description="clears the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPC3" description="clears the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPC4" description="clears the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPC5" description="clears the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPC6" description="clears the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPC7" description="clears the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPC8" description="clears the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPC9" description="clears the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPC10" description="clears the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPC11" description="clears the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPC12" description="clears the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPC13" description="clears the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPC14" description="clears the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPC15" description="clears the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x38" size="0" name="INTSTATUS" access="Read/Write" description="GPIO Interrupt Status/Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ISC0" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="1" size="1" name="ISC1" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="2" size="1" name="ISC2" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="3" size="1" name="ISC3" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="4" size="1" name="ISC4" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="5" size="1" name="ISC5" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="6" size="1" name="ISC6" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="7" size="1" name="ISC7" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="8" size="1" name="ISC8" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="9" size="1" name="ISC9" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="10" size="1" name="ISC10" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="11" size="1" name="ISC11" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="12" size="1" name="ISC12" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="13" size="1" name="ISC13" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="14" size="1" name="ISC14" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="15" size="1" name="ISC15" description="writing ‘1’ is request to clear the interrupt" />
+		</Register>
+
+	</RegisterGroup>
+
+	<RegisterGroup name="GPIOC" start="0x44000000" description="GPIOC Registers">
+		<Register start="+0x0" size="0" name="DATA" access="ReadOnly" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="DAT0" description="Port input data bit" />
+			<BitField start="1" size="1" name="DAT1" description="Port input data bit" />
+			<BitField start="2" size="1" name="DAT2" description="Port input data bit" />
+			<BitField start="3" size="1" name="DAT3" description="Port input data bit" />
+			<BitField start="4" size="1" name="DAT4" description="Port input data bit" />
+			<BitField start="5" size="1" name="DAT5" description="Port input data bit" />
+			<BitField start="6" size="1" name="DAT6" description="Port input data bit" />
+			<BitField start="7" size="1" name="DAT7" description="Port input data bit" />
+			<BitField start="8" size="1" name="DAT8" description="Port input data bit" />
+			<BitField start="9" size="1" name="DAT9" description="Port input data bit" />
+			<BitField start="10" size="1" name="DAT10" description="Port input data bit" />
+			<BitField start="11" size="1" name="DAT11" description="Port input data bit" />
+			<BitField start="12" size="1" name="DAT12" description="Port input data bit" />
+			<BitField start="13" size="1" name="DAT13" description="Port input data bit" />
+			<BitField start="14" size="1" name="DAT14" description="Port input data bit" />
+			<BitField start="15" size="1" name="DAT15" description="Port input data bit" />
+		</Register>
+
+		<Register start="+0x4" size="0" name="DATAOUT" access="Read/Write" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="DA0" description="Port out data bit" />
+			<BitField start="1" size="1" name="DA1" description="Port out data bit" />
+			<BitField start="2" size="1" name="DA2" description="Port out data bit" />
+			<BitField start="3" size="1" name="DA3" description="Port out data bit" />
+			<BitField start="4" size="1" name="DA4" description="Port out data bit" />
+			<BitField start="5" size="1" name="DA5" description="Port out data bit" />
+			<BitField start="6" size="1" name="DA6" description="Port out data bit" />
+			<BitField start="7" size="1" name="DA7" description="Port out data bit" />
+			<BitField start="8" size="1" name="DA8" description="Port out data bit" />
+			<BitField start="9" size="1" name="DA9" description="Port out data bit" />
+			<BitField start="10" size="1" name="DA10" description="Port out data bit" />
+			<BitField start="11" size="1" name="DA11" description="Port out data bit" />
+			<BitField start="12" size="1" name="DA12" description="Port out data bit" />
+			<BitField start="13" size="1" name="DA13" description="Port out data bit" />
+			<BitField start="14" size="1" name="DA14" description="Port out data bit" />
+			<BitField start="15" size="1" name="DA15" description="Port out data bit" />
+		</Register>
+
+		<Register start="+0x10" size="0" name="OUTENSET" access="Read/Write" description="GPIO Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ES0" description="sets the corresponding output enable bit" />
+			<BitField start="1" size="1" name="ES1" description="sets the corresponding output enable bit" />
+			<BitField start="2" size="1" name="ES2" description="sets the corresponding output enable bit" />
+			<BitField start="3" size="1" name="ES3" description="sets the corresponding output enable bit" />
+			<BitField start="4" size="1" name="ES4" description="sets the corresponding output enable bit" />
+			<BitField start="5" size="1" name="ES5" description="sets the corresponding output enable bit" />
+			<BitField start="6" size="1" name="ES6" description="sets the corresponding output enable bit" />
+			<BitField start="7" size="1" name="ES7" description="sets the corresponding output enable bit" />
+			<BitField start="8" size="1" name="ES8" description="sets the corresponding output enable bit" />
+			<BitField start="9" size="1" name="ES9" description="sets the corresponding output enable bit" />
+			<BitField start="10" size="1" name="ES10" description="sets the corresponding output enable bit" />
+			<BitField start="11" size="1" name="ES11" description="sets the corresponding output enable bit" />
+			<BitField start="12" size="1" name="ES12" description="sets the corresponding output enable bit" />
+			<BitField start="13" size="1" name="ES13" description="sets the corresponding output enable bit" />
+			<BitField start="14" size="1" name="ES14" description="sets the corresponding output enable bit" />
+			<BitField start="15" size="1" name="ES15" description="sets the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="OUTENCLR" access="Read/Write" description="GPIO Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="EC0" description="clears the corresponding output enable bit" />
+			<BitField start="1" size="1" name="EC1" description="clears the corresponding output enable bit" />
+			<BitField start="2" size="1" name="EC2" description="clears the corresponding output enable bit" />
+			<BitField start="3" size="1" name="EC3" description="clears the corresponding output enable bit" />
+			<BitField start="4" size="1" name="EC4" description="clears the corresponding output enable bit" />
+			<BitField start="5" size="1" name="EC5" description="clears the corresponding output enable bit" />
+			<BitField start="6" size="1" name="EC6" description="clears the corresponding output enable bit" />
+			<BitField start="7" size="1" name="EC7" description="clears the corresponding output enable bit" />
+			<BitField start="8" size="1" name="EC8" description="clears the corresponding output enable bit" />
+			<BitField start="9" size="1" name="EC9" description="clears the corresponding output enable bit" />
+			<BitField start="10" size="1" name="EC10" description="clears the corresponding output enable bit" />
+			<BitField start="11" size="1" name="EC11" description="clears the corresponding output enable bit" />
+			<BitField start="12" size="1" name="EC12" description="clears the corresponding output enable bit" />
+			<BitField start="13" size="1" name="EC13" description="clears the corresponding output enable bit" />
+			<BitField start="14" size="1" name="EC14" description="clears the corresponding output enable bit" />
+			<BitField start="15" size="1" name="EC15" description="clears the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="INTENSET" access="Read/Write" description="GPIO Interrupt Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IES0" description="sets the interrupt enable bit" />
+			<BitField start="1" size="1" name="IES1" description="sets the interrupt enable bit" />
+			<BitField start="2" size="1" name="IES2" description="sets the interrupt enable bit" />
+			<BitField start="3" size="1" name="IES3" description="sets the interrupt enable bit" />
+			<BitField start="4" size="1" name="IES4" description="sets the interrupt enable bit" />
+			<BitField start="5" size="1" name="IES5" description="sets the interrupt enable bit" />
+			<BitField start="6" size="1" name="IES6" description="sets the interrupt enable bit" />
+			<BitField start="7" size="1" name="IES7" description="sets the interrupt enable bit" />
+			<BitField start="8" size="1" name="IES8" description="sets the interrupt enable bit" />
+			<BitField start="9" size="1" name="IES9" description="sets the interrupt enable bit" />
+			<BitField start="10" size="1" name="IES10" description="sets the interrupt enable bit" />
+			<BitField start="11" size="1" name="IES11" description="sets the interrupt enable bit" />
+			<BitField start="12" size="1" name="IES12" description="sets the interrupt enable bit" />
+			<BitField start="13" size="1" name="IES13" description="sets the interrupt enable bit" />
+			<BitField start="14" size="1" name="IES14" description="sets the interrupt enable bit" />
+			<BitField start="15" size="1" name="IES15" description="sets the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x24" size="0" name="INTENCLR" access="Read/Write" description="GPIO Interrupt Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IEC0" description="clears the interrupt enable bit" />
+			<BitField start="1" size="1" name="IEC1" description="clears the interrupt enable bit" />
+			<BitField start="2" size="1" name="IEC2" description="clears the interrupt enable bit" />
+			<BitField start="3" size="1" name="IEC3" description="clears the interrupt enable bit" />
+			<BitField start="4" size="1" name="IEC4" description="clears the interrupt enable bit" />
+			<BitField start="5" size="1" name="IEC5" description="clears the interrupt enable bit" />
+			<BitField start="6" size="1" name="IEC6" description="clears the interrupt enable bit" />
+			<BitField start="7" size="1" name="IEC7" description="clears the interrupt enable bit" />
+			<BitField start="8" size="1" name="IEC8" description="clears the interrupt enable bit" />
+			<BitField start="9" size="1" name="IEC9" description="clears the interrupt enable bit" />
+			<BitField start="10" size="1" name="IEC10" description="clears the interrupt enable bit" />
+			<BitField start="11" size="1" name="IEC11" description="clears the interrupt enable bit" />
+			<BitField start="12" size="1" name="IEC12" description="clears the interrupt enable bit" />
+			<BitField start="13" size="1" name="IEC13" description="clears the interrupt enable bit" />
+			<BitField start="14" size="1" name="IEC14" description="clears the interrupt enable bit" />
+			<BitField start="15" size="1" name="IEC15" description="clears the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x28" size="0" name="INTTYPESET" access="Read/Write" description="GPIO Interrupt Type Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITS0" description="sets the interrupt type bit" />
+			<BitField start="1" size="1" name="ITS1" description="sets the interrupt type bit" />
+			<BitField start="2" size="1" name="ITS2" description="sets the interrupt type bit" />
+			<BitField start="3" size="1" name="ITS3" description="sets the interrupt type bit" />
+			<BitField start="4" size="1" name="ITS4" description="sets the interrupt type bit" />
+			<BitField start="5" size="1" name="ITS5" description="sets the interrupt type bit" />
+			<BitField start="6" size="1" name="ITS6" description="sets the interrupt type bit" />
+			<BitField start="7" size="1" name="ITS7" description="sets the interrupt type bit" />
+			<BitField start="8" size="1" name="ITS8" description="sets the interrupt type bit" />
+			<BitField start="9" size="1" name="ITS9" description="sets the interrupt type bit" />
+			<BitField start="10" size="1" name="ITS10" description="sets the interrupt type bit" />
+			<BitField start="11" size="1" name="ITS11" description="sets the interrupt type bit" />
+			<BitField start="12" size="1" name="ITS12" description="sets the interrupt type bit" />
+			<BitField start="13" size="1" name="ITS13" description="sets the interrupt type bit" />
+			<BitField start="14" size="1" name="ITS14" description="sets the interrupt type bit" />
+			<BitField start="15" size="1" name="ITS15" description="sets the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x2C" size="0" name="INTTYPECLR" access="Read/Write" description="GPIO Interrupt Type Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITC0" description="clears the interrupt type bit" />
+			<BitField start="1" size="1" name="ITC1" description="clears the interrupt type bit" />
+			<BitField start="2" size="1" name="ITC2" description="clears the interrupt type bit" />
+			<BitField start="3" size="1" name="ITC3" description="clears the interrupt type bit" />
+			<BitField start="4" size="1" name="ITC4" description="clears the interrupt type bit" />
+			<BitField start="5" size="1" name="ITC5" description="clears the interrupt type bit" />
+			<BitField start="6" size="1" name="ITC6" description="clears the interrupt type bit" />
+			<BitField start="7" size="1" name="ITC7" description="clears the interrupt type bit" />
+			<BitField start="8" size="1" name="ITC8" description="clears the interrupt type bit" />
+			<BitField start="9" size="1" name="ITC9" description="clears the interrupt type bit" />
+			<BitField start="10" size="1" name="ITC10" description="clears the interrupt type bit" />
+			<BitField start="11" size="1" name="ITC11" description="clears the interrupt type bit" />
+			<BitField start="12" size="1" name="ITC12" description="clears the interrupt type bit" />
+			<BitField start="13" size="1" name="ITC13" description="clears the interrupt type bit" />
+			<BitField start="14" size="1" name="ITC14" description="clears the interrupt type bit" />
+			<BitField start="15" size="1" name="ITC15" description="clears the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x30" size="0" name="INTPOLSET" access="Read/Write" description="GPIO Interrupt Polarity Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPS0" description="sets the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPS1" description="sets the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPS2" description="sets the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPS3" description="sets the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPS4" description="sets the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPS5" description="sets the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPS6" description="sets the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPS7" description="sets the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPS8" description="sets the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPS9" description="sets the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPS10" description="sets the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPS11" description="sets the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPS12" description="sets the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPS13" description="sets the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPS14" description="sets the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPS15" description="sets the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x34" size="0" name="INTPOLCLR" access="Read/Write" description="GPIO Interrupt Polarity Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPC0" description="clears the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPC1" description="clears the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPC2" description="clears the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPC3" description="clears the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPC4" description="clears the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPC5" description="clears the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPC6" description="clears the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPC7" description="clears the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPC8" description="clears the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPC9" description="clears the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPC10" description="clears the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPC11" description="clears the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPC12" description="clears the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPC13" description="clears the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPC14" description="clears the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPC15" description="clears the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x38" size="0" name="INTSTATUS" access="Read/Write" description="GPIO Interrupt Status/Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ISC0" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="1" size="1" name="ISC1" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="2" size="1" name="ISC2" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="3" size="1" name="ISC3" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="4" size="1" name="ISC4" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="5" size="1" name="ISC5" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="6" size="1" name="ISC6" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="7" size="1" name="ISC7" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="8" size="1" name="ISC8" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="9" size="1" name="ISC9" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="10" size="1" name="ISC10" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="11" size="1" name="ISC11" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="12" size="1" name="ISC12" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="13" size="1" name="ISC13" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="14" size="1" name="ISC14" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="15" size="1" name="ISC15" description="writing ‘1’ is request to clear the interrupt" />
+		</Register>
+
+	</RegisterGroup>
+
+	<RegisterGroup name="GPIOD" start="0x45000000" description="GPIOD Registers">
+		<Register start="+0x0" size="0" name="DATA" access="ReadOnly" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="DAT0" description="Port input data bit" />
+			<BitField start="1" size="1" name="DAT1" description="Port input data bit" />
+			<BitField start="2" size="1" name="DAT2" description="Port input data bit" />
+			<BitField start="3" size="1" name="DAT3" description="Port input data bit" />
+			<BitField start="4" size="1" name="DAT4" description="Port input data bit" />
+			<BitField start="5" size="1" name="DAT5" description="Port input data bit" />
+			<BitField start="6" size="1" name="DAT6" description="Port input data bit" />
+			<BitField start="7" size="1" name="DAT7" description="Port input data bit" />
+			<BitField start="8" size="1" name="DAT8" description="Port input data bit" />
+			<BitField start="9" size="1" name="DAT9" description="Port input data bit" />
+			<BitField start="10" size="1" name="DAT10" description="Port input data bit" />
+			<BitField start="11" size="1" name="DAT11" description="Port input data bit" />
+			<BitField start="12" size="1" name="DAT12" description="Port input data bit" />
+			<BitField start="13" size="1" name="DAT13" description="Port input data bit" />
+			<BitField start="14" size="1" name="DAT14" description="Port input data bit" />
+			<BitField start="15" size="1" name="DAT15" description="Port input data bit" />
+		</Register>
+
+		<Register start="+0x4" size="0" name="DATAOUT" access="Read/Write" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="DA0" description="Port out data bit" />
+			<BitField start="1" size="1" name="DA1" description="Port out data bit" />
+			<BitField start="2" size="1" name="DA2" description="Port out data bit" />
+			<BitField start="3" size="1" name="DA3" description="Port out data bit" />
+			<BitField start="4" size="1" name="DA4" description="Port out data bit" />
+			<BitField start="5" size="1" name="DA5" description="Port out data bit" />
+			<BitField start="6" size="1" name="DA6" description="Port out data bit" />
+			<BitField start="7" size="1" name="DA7" description="Port out data bit" />
+			<BitField start="8" size="1" name="DA8" description="Port out data bit" />
+			<BitField start="9" size="1" name="DA9" description="Port out data bit" />
+			<BitField start="10" size="1" name="DA10" description="Port out data bit" />
+			<BitField start="11" size="1" name="DA11" description="Port out data bit" />
+			<BitField start="12" size="1" name="DA12" description="Port out data bit" />
+			<BitField start="13" size="1" name="DA13" description="Port out data bit" />
+			<BitField start="14" size="1" name="DA14" description="Port out data bit" />
+			<BitField start="15" size="1" name="DA15" description="Port out data bit" />
+		</Register>
+
+		<Register start="+0x10" size="0" name="OUTENSET" access="Read/Write" description="GPIO Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ES0" description="sets the corresponding output enable bit" />
+			<BitField start="1" size="1" name="ES1" description="sets the corresponding output enable bit" />
+			<BitField start="2" size="1" name="ES2" description="sets the corresponding output enable bit" />
+			<BitField start="3" size="1" name="ES3" description="sets the corresponding output enable bit" />
+			<BitField start="4" size="1" name="ES4" description="sets the corresponding output enable bit" />
+			<BitField start="5" size="1" name="ES5" description="sets the corresponding output enable bit" />
+			<BitField start="6" size="1" name="ES6" description="sets the corresponding output enable bit" />
+			<BitField start="7" size="1" name="ES7" description="sets the corresponding output enable bit" />
+			<BitField start="8" size="1" name="ES8" description="sets the corresponding output enable bit" />
+			<BitField start="9" size="1" name="ES9" description="sets the corresponding output enable bit" />
+			<BitField start="10" size="1" name="ES10" description="sets the corresponding output enable bit" />
+			<BitField start="11" size="1" name="ES11" description="sets the corresponding output enable bit" />
+			<BitField start="12" size="1" name="ES12" description="sets the corresponding output enable bit" />
+			<BitField start="13" size="1" name="ES13" description="sets the corresponding output enable bit" />
+			<BitField start="14" size="1" name="ES14" description="sets the corresponding output enable bit" />
+			<BitField start="15" size="1" name="ES15" description="sets the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x14" size="0" name="OUTENCLR" access="Read/Write" description="GPIO Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="EC0" description="clears the corresponding output enable bit" />
+			<BitField start="1" size="1" name="EC1" description="clears the corresponding output enable bit" />
+			<BitField start="2" size="1" name="EC2" description="clears the corresponding output enable bit" />
+			<BitField start="3" size="1" name="EC3" description="clears the corresponding output enable bit" />
+			<BitField start="4" size="1" name="EC4" description="clears the corresponding output enable bit" />
+			<BitField start="5" size="1" name="EC5" description="clears the corresponding output enable bit" />
+			<BitField start="6" size="1" name="EC6" description="clears the corresponding output enable bit" />
+			<BitField start="7" size="1" name="EC7" description="clears the corresponding output enable bit" />
+			<BitField start="8" size="1" name="EC8" description="clears the corresponding output enable bit" />
+			<BitField start="9" size="1" name="EC9" description="clears the corresponding output enable bit" />
+			<BitField start="10" size="1" name="EC10" description="clears the corresponding output enable bit" />
+			<BitField start="11" size="1" name="EC11" description="clears the corresponding output enable bit" />
+			<BitField start="12" size="1" name="EC12" description="clears the corresponding output enable bit" />
+			<BitField start="13" size="1" name="EC13" description="clears the corresponding output enable bit" />
+			<BitField start="14" size="1" name="EC14" description="clears the corresponding output enable bit" />
+			<BitField start="15" size="1" name="EC15" description="clears the corresponding output enable bit" />
+		</Register>
+
+		<Register start="+0x20" size="0" name="INTENSET" access="Read/Write" description="GPIO Interrupt Enable Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IES0" description="sets the interrupt enable bit" />
+			<BitField start="1" size="1" name="IES1" description="sets the interrupt enable bit" />
+			<BitField start="2" size="1" name="IES2" description="sets the interrupt enable bit" />
+			<BitField start="3" size="1" name="IES3" description="sets the interrupt enable bit" />
+			<BitField start="4" size="1" name="IES4" description="sets the interrupt enable bit" />
+			<BitField start="5" size="1" name="IES5" description="sets the interrupt enable bit" />
+			<BitField start="6" size="1" name="IES6" description="sets the interrupt enable bit" />
+			<BitField start="7" size="1" name="IES7" description="sets the interrupt enable bit" />
+			<BitField start="8" size="1" name="IES8" description="sets the interrupt enable bit" />
+			<BitField start="9" size="1" name="IES9" description="sets the interrupt enable bit" />
+			<BitField start="10" size="1" name="IES10" description="sets the interrupt enable bit" />
+			<BitField start="11" size="1" name="IES11" description="sets the interrupt enable bit" />
+			<BitField start="12" size="1" name="IES12" description="sets the interrupt enable bit" />
+			<BitField start="13" size="1" name="IES13" description="sets the interrupt enable bit" />
+			<BitField start="14" size="1" name="IES14" description="sets the interrupt enable bit" />
+			<BitField start="15" size="1" name="IES15" description="sets the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x24" size="0" name="INTENCLR" access="Read/Write" description="GPIO Interrupt Enable Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IEC0" description="clears the interrupt enable bit" />
+			<BitField start="1" size="1" name="IEC1" description="clears the interrupt enable bit" />
+			<BitField start="2" size="1" name="IEC2" description="clears the interrupt enable bit" />
+			<BitField start="3" size="1" name="IEC3" description="clears the interrupt enable bit" />
+			<BitField start="4" size="1" name="IEC4" description="clears the interrupt enable bit" />
+			<BitField start="5" size="1" name="IEC5" description="clears the interrupt enable bit" />
+			<BitField start="6" size="1" name="IEC6" description="clears the interrupt enable bit" />
+			<BitField start="7" size="1" name="IEC7" description="clears the interrupt enable bit" />
+			<BitField start="8" size="1" name="IEC8" description="clears the interrupt enable bit" />
+			<BitField start="9" size="1" name="IEC9" description="clears the interrupt enable bit" />
+			<BitField start="10" size="1" name="IEC10" description="clears the interrupt enable bit" />
+			<BitField start="11" size="1" name="IEC11" description="clears the interrupt enable bit" />
+			<BitField start="12" size="1" name="IEC12" description="clears the interrupt enable bit" />
+			<BitField start="13" size="1" name="IEC13" description="clears the interrupt enable bit" />
+			<BitField start="14" size="1" name="IEC14" description="clears the interrupt enable bit" />
+			<BitField start="15" size="1" name="IEC15" description="clears the interrupt enable bit" />
+		</Register>
+
+		<Register start="+0x28" size="0" name="INTTYPESET" access="Read/Write" description="GPIO Interrupt Type Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITS0" description="sets the interrupt type bit" />
+			<BitField start="1" size="1" name="ITS1" description="sets the interrupt type bit" />
+			<BitField start="2" size="1" name="ITS2" description="sets the interrupt type bit" />
+			<BitField start="3" size="1" name="ITS3" description="sets the interrupt type bit" />
+			<BitField start="4" size="1" name="ITS4" description="sets the interrupt type bit" />
+			<BitField start="5" size="1" name="ITS5" description="sets the interrupt type bit" />
+			<BitField start="6" size="1" name="ITS6" description="sets the interrupt type bit" />
+			<BitField start="7" size="1" name="ITS7" description="sets the interrupt type bit" />
+			<BitField start="8" size="1" name="ITS8" description="sets the interrupt type bit" />
+			<BitField start="9" size="1" name="ITS9" description="sets the interrupt type bit" />
+			<BitField start="10" size="1" name="ITS10" description="sets the interrupt type bit" />
+			<BitField start="11" size="1" name="ITS11" description="sets the interrupt type bit" />
+			<BitField start="12" size="1" name="ITS12" description="sets the interrupt type bit" />
+			<BitField start="13" size="1" name="ITS13" description="sets the interrupt type bit" />
+			<BitField start="14" size="1" name="ITS14" description="sets the interrupt type bit" />
+			<BitField start="15" size="1" name="ITS15" description="sets the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x2C" size="0" name="INTTYPECLR" access="Read/Write" description="GPIO Interrupt Type Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ITC0" description="clears the interrupt type bit" />
+			<BitField start="1" size="1" name="ITC1" description="clears the interrupt type bit" />
+			<BitField start="2" size="1" name="ITC2" description="clears the interrupt type bit" />
+			<BitField start="3" size="1" name="ITC3" description="clears the interrupt type bit" />
+			<BitField start="4" size="1" name="ITC4" description="clears the interrupt type bit" />
+			<BitField start="5" size="1" name="ITC5" description="clears the interrupt type bit" />
+			<BitField start="6" size="1" name="ITC6" description="clears the interrupt type bit" />
+			<BitField start="7" size="1" name="ITC7" description="clears the interrupt type bit" />
+			<BitField start="8" size="1" name="ITC8" description="clears the interrupt type bit" />
+			<BitField start="9" size="1" name="ITC9" description="clears the interrupt type bit" />
+			<BitField start="10" size="1" name="ITC10" description="clears the interrupt type bit" />
+			<BitField start="11" size="1" name="ITC11" description="clears the interrupt type bit" />
+			<BitField start="12" size="1" name="ITC12" description="clears the interrupt type bit" />
+			<BitField start="13" size="1" name="ITC13" description="clears the interrupt type bit" />
+			<BitField start="14" size="1" name="ITC14" description="clears the interrupt type bit" />
+			<BitField start="15" size="1" name="ITC15" description="clears the interrupt type bit" />
+		</Register>
+
+		<Register start="+0x30" size="0" name="INTPOLSET" access="Read/Write" description="GPIO Interrupt Polarity Set Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPS0" description="sets the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPS1" description="sets the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPS2" description="sets the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPS3" description="sets the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPS4" description="sets the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPS5" description="sets the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPS6" description="sets the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPS7" description="sets the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPS8" description="sets the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPS9" description="sets the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPS10" description="sets the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPS11" description="sets the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPS12" description="sets the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPS13" description="sets the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPS14" description="sets the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPS15" description="sets the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x34" size="0" name="INTPOLCLR" access="Read/Write" description="GPIO Interrupt Polarity Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="IPC0" description="clears the interrupt polarity bit" />
+			<BitField start="1" size="1" name="IPC1" description="clears the interrupt polarity bit" />
+			<BitField start="2" size="1" name="IPC2" description="clears the interrupt polarity bit" />
+			<BitField start="3" size="1" name="IPC3" description="clears the interrupt polarity bit" />
+			<BitField start="4" size="1" name="IPC4" description="clears the interrupt polarity bit" />
+			<BitField start="5" size="1" name="IPC5" description="clears the interrupt polarity bit" />
+			<BitField start="6" size="1" name="IPC6" description="clears the interrupt polarity bit" />
+			<BitField start="7" size="1" name="IPC7" description="clears the interrupt polarity bit" />
+			<BitField start="8" size="1" name="IPC8" description="clears the interrupt polarity bit" />
+			<BitField start="9" size="1" name="IPC9" description="clears the interrupt polarity bit" />
+			<BitField start="10" size="1" name="IPC10" description="clears the interrupt polarity bit" />
+			<BitField start="11" size="1" name="IPC11" description="clears the interrupt polarity bit" />
+			<BitField start="12" size="1" name="IPC12" description="clears the interrupt polarity bit" />
+			<BitField start="13" size="1" name="IPC13" description="clears the interrupt polarity bit" />
+			<BitField start="14" size="1" name="IPC14" description="clears the interrupt polarity bit" />
+			<BitField start="15" size="1" name="IPC15" description="clears the interrupt polarity bit" />
+		</Register>
+
+		<Register start="+0x38" size="0" name="INTSTATUS" access="Read/Write" description="GPIO Interrupt Status/Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ISC0" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="1" size="1" name="ISC1" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="2" size="1" name="ISC2" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="3" size="1" name="ISC3" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="4" size="1" name="ISC4" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="5" size="1" name="ISC5" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="6" size="1" name="ISC6" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="7" size="1" name="ISC7" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="8" size="1" name="ISC8" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="9" size="1" name="ISC9" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="10" size="1" name="ISC10" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="11" size="1" name="ISC11" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="12" size="1" name="ISC12" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="13" size="1" name="ISC13" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="14" size="1" name="ISC14" description="writing ‘1’ is request to clear the interrupt" />
+			<BitField start="15" size="1" name="ISC15" description="writing ‘1’ is request to clear the interrupt" />
+		</Register>
+
+	</RegisterGroup>
+
 	<RegisterGroup name="TOE_Common" start="0x46000000" description="Tcp/ip core Offload Engine">
 		<Register start="+0x0" size="0" name="VERSIONR" access="Read/Write" description="TOE Version Register" reset_value="0x00000005" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="8" name="VERSION" description="indicates the TOE version as 0x05." />
