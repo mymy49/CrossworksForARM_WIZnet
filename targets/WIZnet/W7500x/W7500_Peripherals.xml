@@ -27,7 +27,7 @@
 		</Register>
 
 		<Register start="+0x30" size="0" name="FCLK_SSR" access="Read/Write" description="FCLK source select register" reset_value="0x00000001" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="1" name="FCKSRC" description="select register of FCLK clock source" />
+			<BitField start="0" size="2" name="FCKSRC" description="select register of FCLK clock source" />
 		</Register>
 
 		<Register start="+0x34" size="0" name="FCLK_PVSR" access="Read/Write" description="FCLK prescale value select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
