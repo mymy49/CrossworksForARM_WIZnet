@@ -9,7 +9,7 @@
 		</Register>
 
 		<Register start="+0x14" size="0" name="PLL_FCR" access="Read/Write" description="PLL frequency calculating register" reset_value="0x00050200" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="1" name="OD" description="OD" />
+			<BitField start="0" size="2" name="OD" description="OD" />
 			<BitField start="8" size="6" name="N" description="OD" />
 			<BitField start="16" size="6" name="M" description="M" />
 		</Register>
