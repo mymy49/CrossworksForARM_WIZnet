@@ -464,6 +464,282 @@
 			<BitField start="7" size="1" name="PS7" description="Channel 7 Timer/Counter Pause" />
 		</Register>
 	</RegisterGroup>
+
+
+	<RegisterGroup name="UART2" start="0x40006000" description="UART2 Registers">
+		<Register start="+0x0" size="0" name="DR" access="Read/Write" description="Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="DATA" description="Receive (READ)/Transmit (WRITE) data" />
+		</Register>
+		<Register start="+0x4" size="0" name="SR(R)" access="ReadOnly" description="Receive Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="TXBF" description="Transmit buffer full" />
+			<BitField start="1" size="1" name="RXBF" description="Receive buffer full" />
+			<BitField start="2" size="1" name="TXO" description="Transmit Overrun" />
+			<BitField start="3" size="1" name="RXO" description="Receive Overrun" />
+		</Register>
+		<Register start="+0x4" size="0" name="SR(W)" access="WriteOnly" description="Error Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="2" size="1" name="TXO" description="Transmit Overrun" />
+			<BitField start="3" size="1" name="RXO" description="Receive Overrun" />
+		</Register>
+		<Register start="+0x8" size="0" name="CR" access="Read/Write" description="Control Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="TXE" description="Transmit enable" />
+			<BitField start="1" size="1" name="RXE" description="Receive enable" />
+			<BitField start="2" size="1" name="TXIE" description="Transmit Interrupt Enable" />
+			<BitField start="3" size="1" name="RXIE" description="Receive Interrupt Enable" />
+			<BitField start="4" size="1" name="TOIE" description="Transmit Overrun Interrupt Enable" />
+			<BitField start="5" size="1" name="ROIE" description="Receive Overrun Interrupt Enable" />
+		</Register>
+		<Register start="+0xC" size="0" name="ICR" access="Read/Write" description="Interrupt Status/Interrupt Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="TXI" description="Transmit Interrupt" />
+			<BitField start="1" size="1" name="RXI" description="Receive Interrupt" />
+			<BitField start="2" size="1" name="TXOI" description="Transmit Overrun Interrupt" />
+			<BitField start="3" size="1" name="RXOI" description="Receive Overrun Interrupt" />
+		</Register>
+		<Register start="+0x10" size="0" name="BDR" access="Read/Write" description="Baud Rate Divider Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="20" name="BAUDDIV" description="Baud rate divider" />
+		</Register>
+	</RegisterGroup>
+
+
+	<RegisterGroup name="UART0" start="0x4000C000" description="UART0 Registers">
+		<Register start="+0x0" size="0" name="DR" access="Read/Write" description="Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="DATA" description="Receive (READ)/Transmit (WRITE) data" />
+			<BitField start="8" size="1" name="FE" description="Framing error" />
+			<BitField start="9" size="1" name="PE" description="Parity error" />
+			<BitField start="10" size="1" name="BE" description="Break error" />
+			<BitField start="11" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x4" size="0" name="STATUS(RSR)" access="ReadOnly" description="Receive Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FE" description="Framing error" />
+			<BitField start="1" size="1" name="PE" description="Parity error" />
+			<BitField start="2" size="1" name="BE" description="Break error" />
+			<BitField start="3" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x4" size="0" name="STATUS(ECR)" access="WriteOnly" description="Error Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FE" description="Framing error" />
+			<BitField start="1" size="1" name="PE" description="Parity error" />
+			<BitField start="2" size="1" name="BE" description="Break error" />
+			<BitField start="3" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x18" size="0" name="FR" access="ReadOnly" description="Flag Register" reset_value="0x11000000" reset_mask="0xFFFFF000">
+			<BitField start="0" size="1" name="CTS" description="Clear to send" />
+			<BitField start="1" size="1" name="DSR" description="Data set ready" />
+			<BitField start="2" size="1" name="DCD" description="Data carrier detect" />
+			<BitField start="3" size="1" name="BUSY" description="UART busy" />
+			<BitField start="4" size="1" name="RXFE" description="Receive FIFO empty" />
+			<BitField start="5" size="1" name="TXFF" description="Transmit FIFO full" />
+			<BitField start="6" size="1" name="RXFF" description="Receive FIFO full" />
+			<BitField start="7" size="1" name="TXFE" description="Transmit FIFO empty" />
+			<BitField start="8" size="1" name="RI" description="Ring indicator" />
+		</Register>
+		<Register start="+0x20" size="0" name="ILPR" access="Read/Write" description="IrDA Low-Power Counter Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="ILPDVSR" description="8-bit low-power divisor value" />
+		</Register>
+		<Register start="+0x24" size="0" name="IBRD" access="Read/Write" description="Integer Baud Rate Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="BD" description="The integer baud rate divisor" />
+		</Register>
+		<Register start="+0x28" size="0" name="FBRD" access="Read/Write" description="Fractional Baud Rate Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="BD" description="The fractional baud rate divisor" />
+		</Register>
+		<Register start="+0x2C" size="0" name="LCR_H" access="Read/Write" description="Line Control Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="BRK" description="Send break" />
+			<BitField start="1" size="1" name="PEN" description="Parity enable" />
+			<BitField start="2" size="1" name="EPS" description="Even parity select" />
+			<BitField start="3" size="1" name="STP2" description="Two stop bit select" />
+			<BitField start="4" size="1" name="FEN" description="Enable FIFO" />
+			<BitField start="5" size="2" name="WLEN" description="Word length" />
+			<BitField start="7" size="1" name="SPS" description="Stick parity select" />
+		</Register>
+		<Register start="+0x30" size="0" name="CR" access="Read/Write" description="Control register" reset_value="0x00000300" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="UARTEN" description="UART enable" />
+			<BitField start="1" size="1" name="SIREN" description="SIR enable" />
+			<BitField start="2" size="1" name="SIRLP" description="SIR low-power IrDA mode" />
+			<BitField start="8" size="1" name="TXE" description="Transmit enable" />
+			<BitField start="9" size="1" name="RXE" description="Receive enable" />
+			<BitField start="10" size="1" name="DTS" description="Data transmit ready" />
+			<BitField start="11" size="1" name="RTS" description="Request to send" />
+			<BitField start="12" size="1" name="Out1" description="" />
+			<BitField start="13" size="1" name="Out2" description="Request to send" />
+			<BitField start="14" size="1" name="RTSEn" description="RTS hardware flow control enable" />
+			<BitField start="15" size="1" name="CTSEn" description="CTS hardware flow control enable" />
+		</Register>
+		<Register start="+0x34" size="0" name="IFLS" access="WriteOnly" description="Interrupt FIFO Level Select Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="3" name="TXIFLSEL" description="Transmit interrupt FIFO level select" />
+			<BitField start="3" size="3" name="RXIFLSEL" description="Receive interrupt FIFO level select" />
+		</Register>
+		<Register start="+0x38" size="0" name="IMSC" access="Read/Write" description="Interrupt Mask Set/Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIMIM" description="nUART0RI modem interrupt mask" />
+			<BitField start="1" size="1" name="CTSMIM" description="nUART0CTS modem interrupt mask" />
+			<BitField start="2" size="1" name="DCDMIM" description="nUART0DCD modem interrupt mask" />
+			<BitField start="3" size="1" name="DSRMIM" description="nUART0DSR modem interrupt mask" />
+			<BitField start="4" size="1" name="RXIM" description="Receive interrupt mask" />
+			<BitField start="5" size="1" name="TXIM" description="Transmit interrupt mask" />
+			<BitField start="6" size="1" name="RTIM" description="Receive timeout interrupt mask" />
+			<BitField start="7" size="1" name="FEIM" description="Framing error interrupt mask" />
+			<BitField start="8" size="1" name="PEIM" description="Parity error interrupt mask" />
+			<BitField start="9" size="1" name="BEIM" description="Break error interrupt mask" />
+			<BitField start="10" size="1" name="OEIM" description="Overrun error interrupt mask" />
+		</Register>
+		<Register start="+0x3C" size="0" name="RIS" access="ReadOnly" description="Raw Interrupt Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIRMIS" description="nUART0RI modem interrupt status" />
+			<BitField start="1" size="1" name="CTSRMIS" description="nUART0CTS modem interrupt status" />
+			<BitField start="2" size="1" name="DCDRMIS" description="nUART0DCD modem interrupt status" />
+			<BitField start="3" size="1" name="DSRRMIS" description="nUART0DSR modem interrupt status" />
+			<BitField start="4" size="1" name="RXRIS" description="Receive interrupt status" />
+			<BitField start="5" size="1" name="TXRIS" description="Transmit interrupt status" />
+			<BitField start="6" size="1" name="RTRIS" description="Receive timeout interrupt status" />
+			<BitField start="7" size="1" name="FERIS" description="Framing error interrupt status" />
+			<BitField start="8" size="1" name="PERIS" description="Parity error interrupt status" />
+			<BitField start="9" size="1" name="BERIS" description="Break error interrupt status" />
+			<BitField start="10" size="1" name="OERIS" description="Overrun error interrupt status" />
+		</Register>
+		<Register start="+0x40" size="0" name="MIS" access="ReadOnly" description="Masked Interrupt Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIMMIS" description="nUART0RI modem masked interrupt status" />
+			<BitField start="1" size="1" name="CTSMMIS" description="nUART0CTS modem masked interrupt status" />
+			<BitField start="2" size="1" name="DCDMMIS" description="nUART0DCD modem masked interrupt status" />
+			<BitField start="3" size="1" name="DSRMMIS" description="nUART0DSR modem masked interrupt status" />
+			<BitField start="4" size="1" name="RXMIS" description="Receive masked interrupt status" />
+			<BitField start="5" size="1" name="TXMIS" description="Transmit masked interrupt status" />
+			<BitField start="6" size="1" name="RTMIS" description="Receive timeout masked interrupt status" />
+			<BitField start="7" size="1" name="FEMIS" description="Framing error masked interrupt status" />
+			<BitField start="8" size="1" name="PEMIS" description="Parity error masked interrupt status" />
+			<BitField start="9" size="1" name="BEMIS" description="Break error masked interrupt status" />
+			<BitField start="10" size="1" name="OEMIS" description="Overrun error masked interrupt status" />
+		</Register>
+		<Register start="+0x44" size="0" name="ICR" access="WriteOnly" description="Interrupt Clear Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="RIMMIC" description="nUART0RI modem  interrupt clear" />
+			<BitField start="1" size="1" name="CTSMMIC" description="nUART0CTS modem  interrupt clear" />
+			<BitField start="2" size="1" name="DCDMMIC" description="nUART0DCD modem  interrupt clear" />
+			<BitField start="3" size="1" name="DSRMMIC" description="nUART0DSR modem  interrupt clear" />
+			<BitField start="4" size="1" name="RXIC" description="Receive interrupt clear" />
+			<BitField start="5" size="1" name="TXIC" description="Transmit interrupt clear" />
+			<BitField start="6" size="1" name="RTIC" description="Receive timeout interrupt clear" />
+			<BitField start="7" size="1" name="FEIC" description="Framing error interrupt clear" />
+			<BitField start="8" size="1" name="PEIC" description="Parity error interrupt clear" />
+			<BitField start="9" size="1" name="BEIC" description="Break error interrupt clear" />
+			<BitField start="10" size="1" name="OEIC" description="Overrun error interrupt clear" />
+		</Register>
+	</RegisterGroup>
+
+
+	<RegisterGroup name="UART1" start="0x4000D000" description="UART1 Registers">
+		<Register start="+0x0" size="0" name="DR" access="Read/Write" description="Data Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="DATA" description="Receive (READ)/Transmit (WRITE) data" />
+			<BitField start="8" size="1" name="FE" description="Framing error" />
+			<BitField start="9" size="1" name="PE" description="Parity error" />
+			<BitField start="10" size="1" name="BE" description="Break error" />
+			<BitField start="11" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x4" size="0" name="STATUS(RSR)" access="ReadOnly" description="Receive Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FE" description="Framing error" />
+			<BitField start="1" size="1" name="PE" description="Parity error" />
+			<BitField start="2" size="1" name="BE" description="Break error" />
+			<BitField start="3" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x4" size="0" name="STATUS(ECR)" access="WriteOnly" description="Error Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="FE" description="Framing error" />
+			<BitField start="1" size="1" name="PE" description="Parity error" />
+			<BitField start="2" size="1" name="BE" description="Break error" />
+			<BitField start="3" size="1" name="OE" description="Overrun error" />
+		</Register>
+		<Register start="+0x18" size="0" name="FR" access="ReadOnly" description="Flag Register" reset_value="0x11000000" reset_mask="0xFFFFF000">
+			<BitField start="0" size="1" name="CTS" description="Clear to send" />
+			<BitField start="1" size="1" name="DSR" description="Data set ready" />
+			<BitField start="2" size="1" name="DCD" description="Data carrier detect" />
+			<BitField start="3" size="1" name="BUSY" description="UART busy" />
+			<BitField start="4" size="1" name="RXFE" description="Receive FIFO empty" />
+			<BitField start="5" size="1" name="TXFF" description="Transmit FIFO full" />
+			<BitField start="6" size="1" name="RXFF" description="Receive FIFO full" />
+			<BitField start="7" size="1" name="TXFE" description="Transmit FIFO empty" />
+			<BitField start="8" size="1" name="RI" description="Ring indicator" />
+		</Register>
+		<Register start="+0x20" size="0" name="ILPR" access="Read/Write" description="IrDA Low-Power Counter Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="8" name="ILPDVSR" description="8-bit low-power divisor value" />
+		</Register>
+		<Register start="+0x24" size="0" name="IBRD" access="Read/Write" description="Integer Baud Rate Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="16" name="BD" description="The integer baud rate divisor" />
+		</Register>
+		<Register start="+0x28" size="0" name="FBRD" access="Read/Write" description="Fractional Baud Rate Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="BD" description="The fractional baud rate divisor" />
+		</Register>
+		<Register start="+0x2C" size="0" name="LCR_H" access="Read/Write" description="Line Control Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="BRK" description="Send break" />
+			<BitField start="1" size="1" name="PEN" description="Parity enable" />
+			<BitField start="2" size="1" name="EPS" description="Even parity select" />
+			<BitField start="3" size="1" name="STP2" description="Two stop bit select" />
+			<BitField start="4" size="1" name="FEN" description="Enable FIFO" />
+			<BitField start="5" size="2" name="WLEN" description="Word length" />
+			<BitField start="7" size="1" name="SPS" description="Stick parity select" />
+		</Register>
+		<Register start="+0x30" size="0" name="CR" access="Read/Write" description="Control register" reset_value="0x00000300" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="UARTEN" description="UART enable" />
+			<BitField start="1" size="1" name="SIREN" description="SIR enable" />
+			<BitField start="2" size="1" name="SIRLP" description="SIR low-power IrDA mode" />
+			<BitField start="8" size="1" name="TXE" description="Transmit enable" />
+			<BitField start="9" size="1" name="RXE" description="Receive enable" />
+			<BitField start="10" size="1" name="DTS" description="Data transmit ready" />
+			<BitField start="11" size="1" name="RTS" description="Request to send" />
+			<BitField start="12" size="1" name="Out1" description="" />
+			<BitField start="13" size="1" name="Out2" description="Request to send" />
+			<BitField start="14" size="1" name="RTSEn" description="RTS hardware flow control enable" />
+			<BitField start="15" size="1" name="CTSEn" description="CTS hardware flow control enable" />
+		</Register>
+		<Register start="+0x34" size="0" name="IFLS" access="WriteOnly" description="Interrupt FIFO Level Select Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="3" name="TXIFLSEL" description="Transmit interrupt FIFO level select" />
+			<BitField start="3" size="3" name="RXIFLSEL" description="Receive interrupt FIFO level select" />
+		</Register>
+		<Register start="+0x38" size="0" name="IMSC" access="Read/Write" description="Interrupt Mask Set/Clear Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIMIM" description="nUART0RI modem interrupt mask" />
+			<BitField start="1" size="1" name="CTSMIM" description="nUART0CTS modem interrupt mask" />
+			<BitField start="2" size="1" name="DCDMIM" description="nUART0DCD modem interrupt mask" />
+			<BitField start="3" size="1" name="DSRMIM" description="nUART0DSR modem interrupt mask" />
+			<BitField start="4" size="1" name="RXIM" description="Receive interrupt mask" />
+			<BitField start="5" size="1" name="TXIM" description="Transmit interrupt mask" />
+			<BitField start="6" size="1" name="RTIM" description="Receive timeout interrupt mask" />
+			<BitField start="7" size="1" name="FEIM" description="Framing error interrupt mask" />
+			<BitField start="8" size="1" name="PEIM" description="Parity error interrupt mask" />
+			<BitField start="9" size="1" name="BEIM" description="Break error interrupt mask" />
+			<BitField start="10" size="1" name="OEIM" description="Overrun error interrupt mask" />
+		</Register>
+		<Register start="+0x3C" size="0" name="RIS" access="ReadOnly" description="Raw Interrupt Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIRMIS" description="nUART0RI modem interrupt status" />
+			<BitField start="1" size="1" name="CTSRMIS" description="nUART0CTS modem interrupt status" />
+			<BitField start="2" size="1" name="DCDRMIS" description="nUART0DCD modem interrupt status" />
+			<BitField start="3" size="1" name="DSRRMIS" description="nUART0DSR modem interrupt status" />
+			<BitField start="4" size="1" name="RXRIS" description="Receive interrupt status" />
+			<BitField start="5" size="1" name="TXRIS" description="Transmit interrupt status" />
+			<BitField start="6" size="1" name="RTRIS" description="Receive timeout interrupt status" />
+			<BitField start="7" size="1" name="FERIS" description="Framing error interrupt status" />
+			<BitField start="8" size="1" name="PERIS" description="Parity error interrupt status" />
+			<BitField start="9" size="1" name="BERIS" description="Break error interrupt status" />
+			<BitField start="10" size="1" name="OERIS" description="Overrun error interrupt status" />
+		</Register>
+		<Register start="+0x40" size="0" name="MIS" access="ReadOnly" description="Masked Interrupt Status Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="RIMMIS" description="nUART0RI modem masked interrupt status" />
+			<BitField start="1" size="1" name="CTSMMIS" description="nUART0CTS modem masked interrupt status" />
+			<BitField start="2" size="1" name="DCDMMIS" description="nUART0DCD modem masked interrupt status" />
+			<BitField start="3" size="1" name="DSRMMIS" description="nUART0DSR modem masked interrupt status" />
+			<BitField start="4" size="1" name="RXMIS" description="Receive masked interrupt status" />
+			<BitField start="5" size="1" name="TXMIS" description="Transmit masked interrupt status" />
+			<BitField start="6" size="1" name="RTMIS" description="Receive timeout masked interrupt status" />
+			<BitField start="7" size="1" name="FEMIS" description="Framing error masked interrupt status" />
+			<BitField start="8" size="1" name="PEMIS" description="Parity error masked interrupt status" />
+			<BitField start="9" size="1" name="BEMIS" description="Break error masked interrupt status" />
+			<BitField start="10" size="1" name="OEMIS" description="Overrun error masked interrupt status" />
+		</Register>
+		<Register start="+0x44" size="0" name="ICR" access="WriteOnly" description="Interrupt Clear Register" reset_value="0x00000000" reset_mask="0x00000000">
+			<BitField start="0" size="1" name="RIMMIC" description="nUART0RI modem  interrupt clear" />
+			<BitField start="1" size="1" name="CTSMMIC" description="nUART0CTS modem  interrupt clear" />
+			<BitField start="2" size="1" name="DCDMMIC" description="nUART0DCD modem  interrupt clear" />
+			<BitField start="3" size="1" name="DSRMMIC" description="nUART0DSR modem  interrupt clear" />
+			<BitField start="4" size="1" name="RXIC" description="Receive interrupt clear" />
+			<BitField start="5" size="1" name="TXIC" description="Transmit interrupt clear" />
+			<BitField start="6" size="1" name="RTIC" description="Receive timeout interrupt clear" />
+			<BitField start="7" size="1" name="FEIC" description="Framing error interrupt clear" />
+			<BitField start="8" size="1" name="PEIC" description="Parity error interrupt clear" />
+			<BitField start="9" size="1" name="BEIC" description="Break error interrupt clear" />
+			<BitField start="10" size="1" name="OEIC" description="Overrun error interrupt clear" />
+		</Register>
+	</RegisterGroup>
 	
 
 	<RegisterGroup name="CRG" start="0x41001000" description="Clock Reset Generator">
@@ -603,265 +879,209 @@
 		<Register start="+0x0" size="0" name="PA0" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PA1" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PA2" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PA3" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PA4" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PA5" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PA6" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PA7" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PA8" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PA9" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PA10" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PA11" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PA12" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PA13" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PA14" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PA15" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
 	</RegisterGroup>
 
+
 	<RegisterGroup name="AFC_PB" start="0x41002040" description="PORTA Alternate Function Controll register">
 		<Register start="+0x0" size="0" name="PB0" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PB1" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PB2" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PB3" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PB4" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PB5" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PB6" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PB7" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PB8" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PB9" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PB10" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PB11" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PB12" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PB13" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PB14" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PB15" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
 	</RegisterGroup>
 
+
 	<RegisterGroup name="AFC_PC" start="0x41002080" description="PORTA Alternate Function Controll register">
 		<Register start="+0x0" size="0" name="PC0" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PC1" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PC2" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PC3" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PC4" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PC5" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PC6" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PC7" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PC8" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PC9" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PC10" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PC11" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PC12" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PC13" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PC14" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PC15" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
 	</RegisterGroup>
 
+
 	<RegisterGroup name="AFC_PD" start="0x410020C0" description="PORTA Alternate Function Controll register">
 		<Register start="+0x0" size="0" name="PD0" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PD1" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PD2" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PD3" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PD4" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PD5" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PD6" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PD7" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PD8" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PD9" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PD10" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PD11" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PD12" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PD13" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PD14" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PD15" access="Read/Write" description="Pad alternate function select register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="AF" description="Pad alternate function selection registerr" />
 		</Register>
 	</RegisterGroup>
+
 
 	<RegisterGroup name="PADCON_PA" start="0x41003000" description="PAD Control register">
 		<Register start="+0x0" size="0" name="PA0" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
@@ -871,7 +1091,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PA1" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -879,7 +1098,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PA2" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -887,7 +1105,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PA3" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -895,7 +1112,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PA4" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -903,7 +1119,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PA5" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -911,7 +1126,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PA6" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -919,7 +1133,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PA7" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -927,7 +1140,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PA8" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -935,7 +1147,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PA9" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -943,7 +1154,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PA10" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -951,7 +1161,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PA11" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -959,7 +1168,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PA12" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -967,7 +1175,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PA13" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -975,7 +1182,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PA14" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -983,7 +1189,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PA15" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -991,8 +1196,8 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 	</RegisterGroup>
+
 
 	<RegisterGroup name="PADCON_PB" start="0x41003040" description="PAD Control register">
 		<Register start="+0x0" size="0" name="PB0" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
@@ -1002,7 +1207,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PB1" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
