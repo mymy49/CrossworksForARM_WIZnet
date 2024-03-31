@@ -1214,7 +1214,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PB2" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1222,7 +1221,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PB3" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1230,7 +1228,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PB4" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1238,7 +1235,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PB5" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1246,7 +1242,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PB6" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1254,7 +1249,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PB7" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1262,7 +1256,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PB8" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1270,7 +1263,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PB9" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1278,7 +1270,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PB10" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1286,7 +1277,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PB11" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1294,7 +1284,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PB12" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1302,7 +1291,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PB13" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1310,7 +1298,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PB14" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1318,7 +1305,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PB15" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1326,8 +1312,8 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 	</RegisterGroup>
+
 
 	<RegisterGroup name="PADCON_PC" start="0x41003080" description="PAD Control register">
 		<Register start="+0x0" size="0" name="PC0" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
@@ -1337,7 +1323,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PC1" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1345,7 +1330,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PC2" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1353,7 +1337,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PC3" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1361,7 +1344,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PC4" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1369,7 +1351,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PC5" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1377,7 +1358,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PC6" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1385,7 +1365,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PC7" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1393,7 +1372,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PC8" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1401,7 +1379,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PC9" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1409,7 +1386,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PC10" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1417,7 +1393,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PC11" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1425,7 +1400,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PC12" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1433,7 +1407,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PC13" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1441,7 +1414,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PC14" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1449,7 +1421,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PC15" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1457,8 +1428,8 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 	</RegisterGroup>
+
 
 	<RegisterGroup name="PADCON_PD" start="0x410030C0" description="PAD Control register">
 		<Register start="+0x0" size="0" name="PD0" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
@@ -1468,7 +1439,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x4" size="0" name="PD1" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1476,7 +1446,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x8" size="0" name="PD2" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1484,7 +1453,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0xC" size="0" name="PD3" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1492,7 +1460,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x10" size="0" name="PD4" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1500,7 +1467,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x14" size="0" name="PD5" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1508,7 +1474,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x18" size="0" name="PD6" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1516,7 +1481,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x1C" size="0" name="PD7" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1524,7 +1488,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x20" size="0" name="PD8" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1532,7 +1495,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x24" size="0" name="PD9" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1540,7 +1502,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x28" size="0" name="PD10" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1548,7 +1509,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x2C" size="0" name="PD11" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1556,7 +1516,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x30" size="0" name="PD12" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1564,7 +1523,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x34" size="0" name="PD13" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1572,7 +1530,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x38" size="0" name="PD14" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1580,7 +1537,6 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 		<Register start="+0x3C" size="0" name="PD15" access="Read/Write" description="GPIO Data Register" reset_value="0x00000060" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="2" name="PUPD" description="Pull-up, Pull-down selection register" />
 			<BitField start="2" size="1" name="DS" description="Driving strength selection register" />
@@ -1588,8 +1544,64 @@
 			<BitField start="5" size="1" name="IE" description="Input buffer enable selection register" />
 			<BitField start="6" size="1" name="CS" description="CMOS input or Summit trigger input selection register" />
 		</Register>
-
 	</RegisterGroup>
+
+
+	<RegisterGroup name="DMA" start="0x41004000" description="DMA registers">
+		<Register start="+0x0" size="0" name="STATUS" access="ReadOnly" description="DMA status register" reset_value="0x00050000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ENABLE" description="Enable status of the controller" />
+			<BitField start="4" size="4" name="STATE" description="Current state of the control state machine" />
+		</Register>
+		<Register start="+0x4" size="0" name="CFG" access="WriteOnly" description="DMA configuration register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ENABLE" description="Enable for the controller" />
+			<BitField start="5" size="3" name="PROT_CTRL" description="Set the AHB-Lite protection" />
+		</Register>
+		<Register start="+0x8" size="0" name="CTRL_BASE_PTR" access="Read/Write" description="DMA control data base pointer register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="8" size="24" name="CTRL_BASE_PTR" description="Pointer to the base address of the primary data structure" />
+		</Register>
+		<Register start="+0xC" size="4" name="ALT_CTRL_BASE_PTR" access="Read/Write" description="DMA control data base pointer register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		</Register>
+		<Register start="+0x10" size="0" name="WAITONREQ_STATUS" access="ReadOnly" description="DMA channel wait on request status register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="DMA_WAITONREQ" description="Channel wait on request status" />
+		</Register>
+		<Register start="+0x14" size="0" name="CHNL_SW_REQUEST" access="WriteOnly" description="DMA channel software request register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_SW_REQUEST" description="Set the appropriate bit to generate a software DMA request on the corresponding DMA channel" />
+		</Register>
+		<Register start="+0x18" size="0" name="CHNL_USEBURST_SET" access="Read/Write" description="DMA channel useburst set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_USEBURST_SET" description="Returns the useburst status, or disable dma_sreq[Channel-1] form generating DMA requests" />
+		</Register>
+		<Register start="+0x1C" size="0" name="CHNL_USEBURST_CLR" access="WriteOnly" description="DMA channel useburst set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_USEBURST_CLR" description="Set the appropriate bit to enable dma_sreq[Channel-1] to generate requests" />
+		</Register>
+		<Register start="+0x20" size="0" name="CHNL_REQ_MASK_SET" access="Read/Write" description="DMA channel request mask set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_REQ_MASK_SET" description="Returns the request mask status of dma_req[Channel-1] and dma_sreq[Channel-1], or disables the corresponding channel from generating DMA requests" />
+		</Register>
+		<Register start="+0x24" size="0" name="CHNL_REQ_MASK_CLR" access="WriteOnly" description="DMA channel request mask clear register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_REQ_MASK_CLR" description="Set the appropriate bit to enable DMA requests for the channel corresponding to dma_req[Channel-1] and dma_sreq[Channel-1]" />
+		</Register>
+		<Register start="+0x28" size="0" name="CHNL_ENABLE_SET" access="Read/Write" description="DMA channel enable set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_ENABLE_SET" description="Returns the enable status of channels or enables the corresponding channels" />
+		</Register>
+		<Register start="+0x2C" size="0" name="CHNL_ENABLE_CLR" access="WriteOnly" description="DMA channel enable clear register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_ENABLE_CLR" description="Set the appropriate bit to disable the corresponding DMA channel" />
+		</Register>
+		<Register start="+0x30" size="0" name="CHNL_PRI_ALT_SET" access="Read/Write" description="DMA channel primary-alternate set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_PRI_ALT_SET" description="Returns the channel control data structure status, or selects the alternate data structure for the corresponding DMA channels" />
+		</Register>
+		<Register start="+0x34" size="0" name="CHNL_PRI_ALT_CLR" access="WriteOnly" description="DMA channel primary-alternate clear register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_PRI_ALT_CLR" description="Set the appropriate bit to select the primary data structure for the corresponding DMA channel" />
+		</Register>
+		<Register start="+0x38" size="0" name="CHNL_PRIORITY_SET" access="Read/Write" description="DMA channel priority set register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_PRIORITY_SET" description="Returns the channel priority mask status, or set the channel priority to high" />
+		</Register>
+		<Register start="+0x3C" size="0" name="CHNL_PRIORITY_CLR" access="WriteOnly" description="DMA channel priority clear register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="6" name="CHNL_PRIORITY_CLR" description="Set the appropriate bit to select the default priority level for the specified DMA channel" />
+		</Register>
+		<Register start="+0x4C" size="0" name="ERR_CLR" access="Read/Write" description="DMA bus error clear register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="0" size="1" name="ERR_CLR" description="eturns the status of DMA_ERR, or set the signal LOW" />
+		</Register>
+	</RegisterGroup>
+
 
 	<RegisterGroup name="GPIOA" start="0x42000000" description="GPIOA Registers">
 		<Register start="+0x0" size="0" name="DATA" access="ReadOnly" description="GPIO Data Register" reset_value="0x00000000" reset_mask="0x00000000">
